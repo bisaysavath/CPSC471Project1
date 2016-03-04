@@ -67,14 +67,18 @@ main .container form input {
   width: 428px;
   border-style: hidden;
   margin: 5px 0 5px 0;
+  border-top: 1px solid #EEEEEE;
 }
 
 main .container form input#message {
   height: 150px;
+  border-bottom: 1px solid #EEEEEE;
+
 }
 
 main .container form input:placeholder-shown {
   font-family: "Lato", serif;
+  font-size: 20px;
 }
 
 main .container button {
@@ -128,7 +132,7 @@ footer .address a p {
   width: 300px;
   color: white;
   text-align: left;
-  padding: 0 0 5px 50px;
+  padding: 0 0 10px 50px;
 }
 
 footer .copyright {
