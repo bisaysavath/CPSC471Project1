@@ -1,0 +1,44 @@
+body header {
+  background: #2C3E50;
+  height: 100px;
+}
+
+body header .container {
+  width: 1000px;
+  margin: auto;
+}
+
+body header h1 {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 2em;
+  font-weight: bold;
+  float: left;
+  padding: 40px 0 0 0;
+}
+
+body header nav {
+  float: right;
+}
+
+body header img {
+  width: 80px;
+  height: 80px;
+  padding: 10px 10px 10px 10px;
+}
+
+body header nav {
+  padding: 40px 0 0 0;
+}
+
+body header nav a {
+  font-family: "Montserrat";
+  font-size: 1em;
+  color: white;
+  padding: 0 3px 0 3px;
+  text-decoration: none;
+}
+
+body header nav a:hover {
+  color: #268AC0;
+}
