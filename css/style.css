@@ -11,7 +11,7 @@ body header .container {
 body header h1 {
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: bold;
   float: left;
   padding: 40px 0 0 0;
@@ -25,10 +25,14 @@ body header nav {
   float: right;
 }
 
+body header nav .active {
+  color: #268AC0;
+}
+
 body header img {
-  width: 80px;
-  height: 80px;
-  padding: 10px 10px 10px 10px;
+  width: 70px;
+  height: 70px;
+  padding: 15px 10px 10px 10px;
 }
 
 body header nav {
@@ -54,7 +58,7 @@ main .container {
 
 main .container h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 3em;
+  font-size: 2.3em;
   padding: 20px 0 20px 0;
   color: #2C3E50;
   margin: auto;
@@ -80,9 +84,10 @@ main .container form input {
 }
 
 main .container form textarea {
-  width: 428px;
+  width: 426px;
   height: 150px;
   border-style: none;
+  margin: 5px 0 5px 0;
   resize: none;
   font-size: 20px;
   outline-width: 0px;
@@ -128,7 +133,7 @@ footer {
 }
 
 footer .address {
-  width: 300px;
+  width: 205px;
   margin: auto;
 }
 
@@ -137,8 +142,8 @@ footer .address a {
 }
 
 footer .address h3 {
-  font-family: "Lato", serif;
-  font-size: 2em;
+  font-family: "Montserrat", serif;
+  font-size: 1.5em;
   font-weight: bold;
   color: white;
   text-align: center;
@@ -159,10 +164,9 @@ footer .address a p {
   font-size: 100%;
   font-weight: bold;
   margin: auto;
-  width: 300px;
   color: white;
-  text-align: left;
-  padding: 0 0 10px 50px;
+  text-align: center;
+  padding: 0 0 10px 0;
 }
 
 footer .copyright {
