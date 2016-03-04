@@ -30,8 +30,6 @@ body header nav .active {
 }
 
 body header img {
-  width: 70px;
-  height: 70px;
   padding: 15px 10px 10px 10px;
 }
 
@@ -80,7 +78,7 @@ main .container form input {
   height: 35px;
   border-style: hidden;
   margin: 5px 0 5px 0;
-  outline-width: 0px;
+  outline-width: 0;
 }
 
 main .container form textarea {
@@ -90,7 +88,7 @@ main .container form textarea {
   margin: 5px 0 5px 0;
   resize: none;
   font-size: 20px;
-  outline-width: 0px;
+  outline-width: 0;
 }
 
 main .container form textarea {
@@ -161,7 +159,6 @@ footer .address a h4 {
 
 footer .address a p {
   font-family: "Lato", serif;
-  font-size: 100%;
   font-weight: bold;
   margin: auto;
   color: white;
@@ -176,10 +173,8 @@ footer .copyright {
 
 footer .copyright p {
   color: white;
-  width: 428px;
   margin: auto;
   font-family: "Lato", serif;
-  font-size: 100%;
   text-align: center;
   padding: 15px 0 0 0;
 }
