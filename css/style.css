@@ -124,6 +124,33 @@ main .container button:hover {
   background: #128f76;
 }
 
+/*Profile picture style*/
+main.profile-page {
+  background: #18BB9C;
+}
+
+main .container img.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 12px 54px 1px rgba(0,0,0,0.42);
+  -moz-box-shadow: 3px 12px 54px 1px rgba(0,0,0,0.42);
+  box-shadow: 3px 12px 54px 1px rgba(0,0,0,0.42);
+  align-self: center;
+  margin: 50px 400px 20px 400px;
+}
+
+main .container .user-info p {
+  font-family: "Handlee", serif;
+  font-size: 1.5em;
+  color: white;
+  width: 300px;
+  margin: auto;
+  padding-bottom: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
 footer {
   clear: both;
   height: 200px;
