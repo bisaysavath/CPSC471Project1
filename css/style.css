@@ -4,7 +4,7 @@ body header {
 }
 
 body header .container {
-  width: 1000px;
+  width: 855px;
   margin: auto;
 }
 
@@ -15,6 +15,10 @@ body header h1 {
   font-weight: bold;
   float: left;
   padding: 40px 0 0 0;
+}
+
+body header a h1:hover {
+  color: #268AC0;
 }
 
 body header nav {
@@ -62,21 +66,39 @@ main .container form {
   margin: auto;
 }
 
-main .container form input {
-  font-size: 1.5em;
-  width: 428px;
-  border-style: hidden;
-  margin: 5px 0 5px 0;
+main .container form .form-input {
   border-top: 1px solid #EEEEEE;
 }
 
-main .container form input#message {
-  height: 150px;
-  border-bottom: 1px solid #EEEEEE;
-
+main .container form input {
+  font-size: 20px;
+  width: 428px;
+  height: 35px;
+  border-style: hidden;
+  margin: 5px 0 5px 0;
+  outline-width: 0px;
 }
 
-main .container form input:placeholder-shown {
+main .container form textarea {
+  width: 428px;
+  height: 150px;
+  border-style: none;
+  resize: none;
+  font-size: 20px;
+  outline-width: 0px;
+}
+
+main .container form textarea {
+  border-bottom: 1px solid #EEEEEE;
+}
+
+main .container form input,
+main .container form textarea {
+  color: #2C3E50;
+}
+
+main .container form input:placeholder-shown,
+main .container form textarea:placeholder-shown {
   font-family: "Lato", serif;
   font-size: 20px;
 }
@@ -95,15 +117,22 @@ main .container button {
   cursor: pointer;
 }
 
+main .container button:hover {
+  background: #128f76;
+}
+
 footer {
   clear: both;
   height: 200px;
   background: #2C3E50;
 }
 
-footer .address a {
-  width: 428px;
+footer .address {
+  width: 300px;
   margin: auto;
+}
+
+footer .address a {
   text-decoration: none;
 }
 
