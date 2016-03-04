@@ -3,9 +3,7 @@ var main = function () {
   $("main .user-info p").hide();
 
   $("main h2").fadeIn( function () {
-    $("main .user-info p").slideDown(1000, function () {
-      console.log("hi");
-    });
+    $("main .user-info p").slideDown(1000);
   });
 
 }
