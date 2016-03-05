@@ -1,6 +1,7 @@
+/* This fixes the logo ratio problem
 *, *:before, *:after {
   box-sizing: border-box;
-}
+}*/
 
 html {
   overflow-y: scroll;
@@ -10,7 +11,7 @@ body {
   background: #c1bdba;
   font-family: 'Titillium Web', sans-serif;
 }
-
+/* This fixes the nav loading problem
 a {
   text-decoration: none;
   color: #1ab188;
@@ -19,7 +20,7 @@ a {
 }
 a:hover {
   color: #179b77;
-}
+}*/
 
 .form {
   padding: 40px;
