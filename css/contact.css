@@ -3,7 +3,7 @@ main .container form {
   margin: auto;
 }
 
-main .container form .form-input {
+main .container form div {
   border-top: 1px solid #EEEEEE;
 }
 
@@ -51,8 +51,9 @@ main .container button {
   height: 40px;
   border-radius: 10px;
   float: right;
-  margin: 20px 0 20px 0;
+  margin: 20px 280px 20px 0;
   cursor: pointer;
+  outline: none;
 }
 
 main .container button:hover {

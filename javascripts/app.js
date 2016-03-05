@@ -6,13 +6,14 @@ var main = function () {
     $("main .user-info p").slideDown(1000);
   });
 
-  // $("body main form button").on("click", function () {
-  //   // console.log($(".form-name").val());
-  //   // console.log($(".form-email").val());
-  //   // console.log($(".form-phone").val());
-  //   // console.log($(".form-msg").val());
-  //   alert($(".form-name").val());
-  // })
+  $("body main button").on("click", function () {
+    console.log($("body main form .input-name").val());
+    console.log($("body main form .input-email").val());
+    console.log($("body main form .input-phone").val());
+    console.log($("body main form .input-message").val());
+    $("body main form input").val("");
+    $("body main form textarea").val("");
+  })
 }
 
 $(document).ready(main);
