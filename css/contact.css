@@ -35,7 +35,11 @@ main .container form textarea {
   color: #2C3E50;
 }
 
-main .container form input:placeholder-shown,
+main .container form input:placeholder-shown {
+  font-family: "Lato", serif;
+  font-size: 20px;
+}
+
 main .container form textarea:placeholder-shown {
   font-family: "Lato", serif;
   font-size: 20px;
