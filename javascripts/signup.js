@@ -71,7 +71,7 @@ $(document).ready(function(){
         
     // });
    
-   $("#login").hide(); 
+   $("#signup").hide(); 
    main();
     
 });
