@@ -10,7 +10,7 @@
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src = "javascripts/signup.js"></script>
-    
+    <meta charset="utf-8">
 </head>
 
 <body>
@@ -21,9 +21,9 @@
                 <img src="images/paper-plane.png" width="70" height="70" alt="paper plane" />
             </a>
             <nav>
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
                 <a href="profile.html">Profile</a>
-                <a href="signup.html">Sign up</a>
+                <!-- <a href="signup.html">Sign up</a> -->
                 <a class="active" href="#">Log in</a>
                 <a href="help.html">Help</a>
                 <a href="contact.html">Contact</a>
@@ -60,19 +60,19 @@
             <!-- SIGN UP -->
             <div id="signup">
                 <form id="newUser" action="/" method="post">
-                                
+
                     <h2>First Name</h2>
                     <div class="field-wrap">
                         <input type="text" id="fname" placeholder="First Name*" required autocomplete="off" />
                     </div>
                     <hr>
-                                    
+
                     <h2>Last Name</h2>
                     <div class="field-wrap">
                         <input type="text" id="lname" placeholder="Last Name*" required autocomplete="off" />
                     </div>
                     <hr>
-                
+
                     <h2>Email Address </h2>
                     <div class="field-wrap">
                         <input type="email" id="email" placeholder="Email addresss*" required autocomplete="off" />
@@ -92,19 +92,19 @@
                     </div>
                     <h3>This is going to be your personal link, to share your profile with other people.</h3>
                     <hr>
-                    
+
                     <h2>Job Title</h2>
                     <div class="field-wrap">
                         <input type="text" id="jobTitle" placeholder="Software Engineer*" required autocomplete="off" />
                     </div>
                     <hr>
-                    
+
                     <h2>Job Tags</h2>
                     <div class="field-wrap">
                         <input type="text" id="tags" placeholder="Web Developer, Data Scientist" required autocomplete="off" />
                     </div>
                     <hr>
-                    
+
                     <h2>Birthday</h2>
                     <div class="field-wrap">
                         <input type="date" id="birthday" placeholder="yyyy/dd/mm" required autocomplete="off" />
@@ -120,7 +120,7 @@
                         </select>
                     </form>
                     <hr>
-                    
+
                     <h2>Profile Picture</h2>
                     <div class="field-wrap">
                         <input type="url" id="profilePic" placeholder="image URL" required autocomplete="off" />
