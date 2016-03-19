@@ -1,0 +1,61 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "fname": "Taylor",
+            "lname": "Swift",
+            "jobTitle": "Singer and Entertainer",
+            "profilePicURL": "http://www.marketingdirecto.com/wp-content/uploads/2016/02/Taylor-Swift2.jpg",
+            "twitterURL": "https://twitter.com/taylorswift13",
+            "facebookURL": "https://www.facebook.com/TaylorSwift",
+            "tags": [
+                "singer",
+                "entertainer",
+                "artist"
+            ],
+            "email": "taylor@swift.com",
+            "username": "taylorswift",
+            "birthday": "12/13/1991",
+            "gender": "female"
+        },
+        {
+            "id": 2,
+            "fname": "Calvin",
+            "lname": "Harris",
+            "jobTitle": "Producer",
+            "profilePicURL": "http://www.look.co.uk/sites/default/files/imagecache/scaled_620px_wide/calvin_harris_taylor_swift.jpg",
+            "twitterURL": "https://twitter.com/calvinharris",
+            "facebookURL": "https://www.facebook.com/calvinharris/",
+            "tags": [
+                "DJ",
+                "singer",
+                "songwriter",
+                "producer",
+                "recording artist",
+                "remixer"
+            ],
+            "email": "calvin@harris.com",
+            "username": "calvinharris",
+            "birthday": "01/17/1984",
+            "gender": "male"
+        },
+        {
+            "id": 3,
+            "fname": "Ellie",
+            "lname": "Goulding",
+            "jobTitle": "Music Artist and Singer",
+            "profilePicURL": "http://celebrityinside.com/wp-content/uploads/2014/10/Ellie-Goulding-Biography.jpg",
+            "twitterURL": "https://twitter.com/elliegoulding",
+            "facebookURL": "https://www.facebook.com/elliegoulding",
+            "tags": [
+                "singer",
+                "entertainer",
+                "artist"
+            ],
+            "email": "ellie@goulding.com",
+            "username": "elliegoulding",
+            "birthday": "01/17/1984",
+            "gender": "12/30/1986"
+        }
+    ]
+}
