@@ -76,28 +76,28 @@ main .container h2 {
 	width:20%;
 	float:left;
 	margin-bottom:10px;
-	
+
 }
 .icons .share {
 	width:20%;
-	float:left;	
+	float:left;
 }
 .icons .share p {
-	text-align:center;	
+	text-align:center;
 }
 .icons .network {
 	width:20%;
 	float:left;
-	
+
 }
 .icons .network p {
-	text-align:center;	
+	text-align:center;
 }
 #sign_up{
   padding: 15px 25px;
   font-size: 18px;
   cursor: pointer;
-  text-align: center;	
+  text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
@@ -130,9 +130,9 @@ main .container h2 {
 }
 
 /*Profile picture style*/
-main.profile-page {
+/*main.profile-page {
   background: #18BB9C;
-}
+}*/
 
 main .container img.profile-picture {
   width: 200px;
@@ -148,7 +148,7 @@ main .container img.profile-picture {
 main .container .user-info p {
   font-family: "Handlee", serif;
   font-size: 1.5em;
-  color: white;
+  /*color: #18BB9C;*/
   width: 300px;
   margin: auto;
   padding-bottom: 30px;
