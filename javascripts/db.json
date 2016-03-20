@@ -14,9 +14,7 @@
                 "artist"
             ],
             "email": "taylor@swift.com",
-            "username": "taylorswift",
-            "birthday": "12/13/1991",
-            "gender": "female"
+            "username": "taylorswift"
         },
         {
             "id": 2,
@@ -35,9 +33,7 @@
                 "remixer"
             ],
             "email": "calvin@harris.com",
-            "username": "calvinharris",
-            "birthday": "01/17/1984",
-            "gender": "male"
+            "username": "calvinharris"
         },
         {
             "id": 3,
@@ -53,9 +49,7 @@
                 "artist"
             ],
             "email": "ellie@goulding.com",
-            "username": "elliegoulding",
-            "birthday": "01/17/1984",
-            "gender": "12/30/1986"
+            "username": "elliegoulding"
         }
     ]
 }
