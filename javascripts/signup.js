@@ -1,4 +1,5 @@
 var main = function (){
+     console.log(document.cookie);
 
     /*toogling between "login" and "signup" */
     $('.tab a').on('click', function(e) {
@@ -31,7 +32,7 @@ var main = function (){
             $("#loginEmail").val("");
             $("#loginPassword").val("");
 
-            $.getJSON("javascripts/db.json", function(users) {
+            $.getJSON("http://localhost:3000/users", function(users) {
                 console.log(users);
                 var isUserFound = false;
                 users.forEach(function(user) {
@@ -45,26 +46,30 @@ var main = function (){
                             console.log("login succesful!!");
                             //code to display profile of user
 
-                            //removing the login form for now
-                            $(".form").remove();
+                            // //removing the login form for now
+                            // $(".form").remove();
+                            //
+                            // //changing info
+                            // $(".profile-picture").attr("src", user.profilePicURL);
+                            // $(".user-name").text(user.fname + " " + user.lname);
+                            // $(".user-info p").text(user.jobTitle)
+                            // $("#twitterURL").attr("href",user.twitterURL);
+                            // $("#facebookURL").attr("href",user.facebookURL);
+                            //
+                            // $(".profile-page").fadeIn(600);
 
-                            //changing info
-                            $(".profile-picture").attr("src", user.profilePicURL);
-                            $(".user-name").text(user.fname + " " + user.lname);
-                            $(".user-info p").text(user.jobTitle)
-                            $("#twitterURL").attr("href",user.twitterURL);
-                            $("#facebookURL").attr("href",user.facebookURL);
-
-                            $(".profile-page").fadeIn(600);
-
+                            // Set cookie to current user and go to profile
+                            setCookieAndLogin("username", user.username);
                         }
                         else {
-                            console.log("user entered incorrect password");
+                            alert("User entered incorrect password.");
+                            console.log("User entered incorrect password.");
                         }
                     }
                 });
 
                 if (!isUserFound) {
+                    alert("Email has not been registered.");
                     console.log("Email has not been registered.");
                 }
 
@@ -102,7 +107,7 @@ var main = function (){
             var password = $("#password").val();
             var username = $("#username").val();
             var jobTitle = $("#jobTitle").val();
-            var jobTags = $("#tags").val().split(","); // Split returns array of a word delimited by , 
+            var jobTags = $("#tags").val().split(","); // Split returns array of a word delimited by ,
             var profilePic = $("#profilePic").val();
 
             var newUser = {
@@ -113,7 +118,7 @@ var main = function (){
                 username: username,
                 jobTitle: jobTitle,
                 tags: jobTags,
-                profilePic: profilePic
+                profilePicURL: profilePic
             };
 
             // Clearing all the input values
@@ -126,7 +131,10 @@ var main = function (){
             $("#tags").val("");
             $("#profilePic").val("");
 
-            $.post("http://localhost:3000/users", newUser);
+            $.post("http://localhost:3000/users", newUser, function () {
+                // Set cookie to current user and go to profile
+                setCookieAndLogin("username", user.username);
+            });
             // if (fname != "" && lname != "" && email != "" && password != "" && username != "" && jobTitle != ""
             // && tags != "" && profilePic != "")
             // {
@@ -137,8 +145,19 @@ var main = function (){
             // }
         }
     });
-
 }
+
+// Credit: http://www.w3schools.com/js/js_cookies.asp
+var setCookieAndLogin = function (cname, cvalue) {
+    var d = new Date();
+    d.setTime(d.getTime() + (5*1000)); // cookie is good for 5 seconds
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+
+    // Go to profile profile-page
+    window.location.href = "profile.html";
+}
+
 $(document).ready(function(){
     "use strict";
 

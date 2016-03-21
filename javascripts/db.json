@@ -41,7 +41,7 @@
       "id": 3,
       "fname": "Ellie",
       "lname": "Goulding",
-      "jobTitle": "Music Artist and Singer",
+      "jobTitle": "Music, Artist and Singer",
       "profilePicURL": "http://celebrityinside.com/wp-content/uploads/2014/10/Ellie-Goulding-Biography.jpg",
       "twitterURL": "https://twitter.com/elliegoulding",
       "facebookURL": "https://www.facebook.com/elliegoulding",
@@ -59,15 +59,16 @@
       "lname": "DiCaprio",
       "email": "leonardo@dicaprio.com",
       "password": "leonardo",
-      "username": "leonardo.me",
+      "username": "leonardo",
       "jobTitle": "Actor",
-      "tags[]": [
+      "tags": [
         "celebrity",
         " movie",
         " entertainer"
       ],
-      "profilePic": "http://www.eonline.com/resize/300/300/www.eonline.com/eol_images/Entire_Site/2016128/rs_300x300-160228222648-600-leonardo-dicaprio-oscar-winner-revenant-0216.jpg",
+      "profilePicURL": "http://www.eonline.com/resize/300/300/www.eonline.com/eol_images/Entire_Site/2016128/rs_300x300-160228222648-600-leonardo-dicaprio-oscar-winner-revenant-0216.jpg",
       "id": 4
     }
-  ]
+  ],
+  "contacts": []
 }
