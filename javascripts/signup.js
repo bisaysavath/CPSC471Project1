@@ -52,6 +52,8 @@ var main = function (){
                             $(".profile-picture").attr("src", user.profilePicURL);
                             $(".user-name").text(user.fname + " " + user.lname);
                             $(".user-info p").text(user.jobTitle)
+                            $("#twitterURL").attr("href",user.twitterURL);
+                            $("#facebookURL").attr("href",user.facebookURL);
                             
                             $(".profile-page").fadeIn(600);
                             

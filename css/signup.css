@@ -143,3 +143,12 @@ hr {
   background: #1ab188;
   color: #ffffff;
 }
+
+/*ADDING SOCIAL MEDIA ICONS*/
+.user-social-media {
+    font-family: "Handlee", serif;
+    font-size: 1.5em;
+    margin: auto;
+    line-height: 30px;
+    text-align: center;
+}

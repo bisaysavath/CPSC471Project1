@@ -156,6 +156,15 @@ main .container .user-info p {
   text-align: center;
 }
 
+/*ADDING SOCIAL MEDIA ICONS*/
+.user-social-media {
+    font-family: "Handlee", serif;
+    font-size: 1.5em;
+    margin: auto;
+    line-height: 30px;
+    text-align: center;
+}
+
 footer {
   clear: both;
   height: 200px;
