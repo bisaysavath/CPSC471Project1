@@ -41,16 +41,17 @@
              <div class="tab-content">
             <!--- LOGIN -->
             <div id="login">
-                <form action="/" method="post">
+                <!--<form action="/" method="post">-->
+                <form>
                     <h2>Email Address </h2>
                     <div class="field-wrap">
-                        <input type="email" placeholder="Email addresss*" required autocomplete="off" />
+                        <input type="email" id="loginEmail" placeholder="Email addresss*" required autocomplete="off" />
                     </div>
                     <hr>
 
                     <h2>Password</h2>
                     <div class="field-wrap">
-                        <input type="password" placeholder="Password*" required autocomplete="off" />
+                        <input type="password"  id="loginPassword" placeholder="Password*" required autocomplete="off" />
                     </div>
                     <hr>
                     <button type="submit" class="button button-block" />Get Started</button>
@@ -59,7 +60,8 @@
             <!-- END LOGIN -->
             <!-- SIGN UP -->
             <div id="signup">
-                <form id="newUser" action="/" method="post">
+                <!--<form id="newUser" action="/" method="post">-->
+                <form>
 
                     <h2>First Name</h2>
                     <div class="field-wrap">
@@ -118,6 +120,22 @@
             </div>
         </div>
         <!-- END FORM -->
+        
+        <!-- FOR NOW PROFILE PAGE -->
+        <div class="profile-page">
+            <div class="container">
+                <img class="profile-picture" src="http://www.eonline.com/resize/300/300/www.eonline.com/eol_images/Entire_Site/2016128/rs_300x300-160228222648-600-leonardo-dicaprio-oscar-winner-revenant-0216.jpg"
+                width="300" height="200" alt="Leonardo DiCaprio's holding an Oscar trophy" />
+                <h2 class="user-name">Leonardo DiCaprio</h2>
+                <div class="user-info">
+                    <p>
+                        I'm an award-winning actor and a three-time Academy Award® nominee. Born in Hollywood, California, I started acting at the
+                        age of 14.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
     </main>
 
     <footer>
