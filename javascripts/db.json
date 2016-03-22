@@ -82,6 +82,17 @@
       "tags": "singer, composer, celebrity",
       "profilePicURL": "http://static.comicvine.com/uploads/original/14/149534/4661440-9107169598-HiEKWG.jpeg",
       "id": 7
+    },
+    {
+      "fname": "Adele",
+      "lname": "Adkins",
+      "email": "adele@adkins.com",
+      "password": "adele",
+      "username": "adele",
+      "jobTitle": "Singer",
+      "tags": "singer, composer",
+      "profilePicURL": "https://pbs.twimg.com/profile_images/672996976347111426/aMbJuAki.jpg",
+      "id": 8
     }
   ],
   "contacts": []
