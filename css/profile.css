@@ -10,11 +10,11 @@ main .container img.profile-picture {
   -webkit-box-shadow: 3px 12px 54px 1px rgba(0,0,0,0.42);
   -moz-box-shadow: 3px 12px 54px 1px rgba(0,0,0,0.42);
   box-shadow: 3px 12px 54px 1px rgba(0,0,0,0.42);
-  align-self: center;
-  margin: 50px 400px 20px 400px;
+  display: block;
+  margin: 50px auto 20px auto;
 }
 
-main .container .user-info p {
+main .container .user-info {
   font-family: "Raleway", sans-serif;
   font-size: 1.5em;
   color: gray;
