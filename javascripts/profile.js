@@ -7,7 +7,6 @@ var main = function () {
     // var username = (cookie.substring("username=".length, cookie.length - 1));
 
     var username = getCookie("username");
-    console.log(username);
 
     // If user hasn't signed in yet, create a main body prompting user to go to signup.html
     if (username == "") {
@@ -61,7 +60,7 @@ var main = function () {
                     $(".user-title").append(user.jobTitle);
 
                     // Set user's tags
-                    user.tags.forEach(function (tag) {
+                    user.tags.split(",").forEach(function (tag) {
                         var $tagSpan = $("<span>").append( "#" + tag);
 
                         $(".user-tags").append($tagSpan);

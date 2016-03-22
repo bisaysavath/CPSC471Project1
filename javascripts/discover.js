@@ -2,6 +2,7 @@
 
 var main = function () {
     $.get("http://localhost:3000/users", function (users) {
+
         users.forEach(function (user) {
             // Article
             var $article = $("<article>").attr("class", "white-panel");
@@ -20,7 +21,7 @@ var main = function () {
 
             // Tags
             var tags = "";
-            user.tags.forEach(function (tag) {
+            user.tags.split(",").forEach(function (tag) {
                 tags = tags + " #" + tag;
             });
 

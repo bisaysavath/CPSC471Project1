@@ -107,18 +107,18 @@ var main = function (){
             var password = $("#password").val();
             var username = $("#username").val();
             var jobTitle = $("#jobTitle").val();
-            var jobTags = $("#tags").val().split(","); // Split returns array of a word delimited by ,
+            var jobTags = $("#tags").val();
             var profilePic = $("#profilePic").val();
 
             var newUser = {
-                fname: fname,
-                lname: lname,
-                email: email,
-                password: password,
-                username: username,
-                jobTitle: jobTitle,
-                tags: jobTags,
-                profilePicURL: profilePic
+                "fname": fname,
+                "lname": lname,
+                "email": email,
+                "password": password,
+                "username": username,
+                "jobTitle": jobTitle,
+                "tags": jobTags, // tags are stored as a string becase json-server post problems
+                "profilePicURL": profilePic
             };
 
             // Clearing all the input values
@@ -133,7 +133,7 @@ var main = function (){
 
             $.post("http://localhost:3000/users", newUser, function () {
                 // Set cookie to current user and go to profile
-                setCookieAndLogin("username", user.username);
+                setCookieAndLogin("username", newUser.username);
             });
             // if (fname != "" && lname != "" && email != "" && password != "" && username != "" && jobTitle != ""
             // && tags != "" && profilePic != "")
@@ -150,7 +150,7 @@ var main = function (){
 // Credit: http://www.w3schools.com/js/js_cookies.asp
 var setCookieAndLogin = function (cname, cvalue) {
     var d = new Date();
-    d.setTime(d.getTime() + (10*1000)); // cookie is good for 10 seconds
+    d.setTime(d.getTime() + (60*1000)); // cookie is good for 60 seconds
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
 

@@ -8,11 +8,7 @@
       "profilePicURL": "http://www.marketingdirecto.com/wp-content/uploads/2016/02/Taylor-Swift2.jpg",
       "twitterURL": "https://twitter.com/taylorswift13",
       "facebookURL": "https://www.facebook.com/TaylorSwift",
-      "tags": [
-        "singer",
-        "entertainer",
-        "artist"
-      ],
+      "tags": "singer, entertainer, artist",
       "email": "taylor@swift.com",
       "username": "taylorswift",
       "password": "taylor"
@@ -22,17 +18,10 @@
       "fname": "Calvin",
       "lname": "Harris",
       "jobTitle": "Producer",
-      "profilePicURL": "http://www.look.co.uk/sites/default/files/imagecache/scaled_620px_wide/calvin_harris_taylor_swift.jpg",
+      "profilePicURL": "https://lh4.googleusercontent.com/-y6KijhnTZPw/AAAAAAAAAAI/AAAAAAAAGL4/RO2Ojg1nG78/s0-c-k-no-ns/photo.jpg",
       "twitterURL": "https://twitter.com/calvinharris",
       "facebookURL": "https://www.facebook.com/calvinharris/",
-      "tags": [
-        "DJ",
-        "singer",
-        "songwriter",
-        "producer",
-        "recording artist",
-        "remixer"
-      ],
+      "tags": "DJ, singer, songwriter, producer, recording, artist, remixer",
       "email": "calvin@harris.com",
       "username": "calvinharris",
       "password": "calvin"
@@ -42,14 +31,10 @@
       "fname": "Ellie",
       "lname": "Goulding",
       "jobTitle": "Music, Artist and Singer",
-      "profilePicURL": "http://celebrityinside.com/wp-content/uploads/2014/10/Ellie-Goulding-Biography.jpg",
+      "profilePicURL": "https://fazmusic17.org/wp-content/uploads/2016/01/Ellie-Goulding-For-Marie-Claire-6-thumb.jpg",
       "twitterURL": "https://twitter.com/elliegoulding",
       "facebookURL": "https://www.facebook.com/elliegoulding",
-      "tags": [
-        "singer",
-        "entertainer",
-        "artist"
-      ],
+      "tags": "singer, entertainer, artist",
       "email": "ellie@goulding.com",
       "username": "elliegoulding",
       "password": "ellie"
@@ -61,13 +46,42 @@
       "password": "leonardo",
       "username": "leonardo",
       "jobTitle": "Actor",
-      "tags": [
-        "celebrity",
-        " movie",
-        " entertainer"
-      ],
-      "profilePicURL": "http://www.eonline.com/resize/300/300/www.eonline.com/eol_images/Entire_Site/2016128/rs_300x300-160228222648-600-leonardo-dicaprio-oscar-winner-revenant-0216.jpg",
+      "tags": "celebrity, movie, entertainer",
+      "profilePicURL": "http://images.boomsbeat.com/data/images/full/32034/422817_original-jpg.jpg",
       "id": 4
+    },
+    {
+      "fname": "Brad",
+      "lname": "Pitt",
+      "email": "brad@pitt.com",
+      "password": "brad",
+      "username": "brad",
+      "jobTitle": "Actor",
+      "tags": "Entertainer",
+      "profilePicURL": "http://images.intouchweekly.com/uploads/posts/image/35654/brad-pitt-oscar-dog-poop.jpg",
+      "id": 5
+    },
+    {
+      "fname": "Ryan",
+      "lname": "James",
+      "email": "ryan@james.com",
+      "password": "ryan",
+      "username": "ryan",
+      "jobTitle": "Actor",
+      "tags": "Entertainer, movie, celebrity",
+      "profilePicURL": "http://marieclaire.media.ipcdigital.co.uk/11116/00008b20a/dc6c/Ryan-Reynolds-James.jpg",
+      "id": 6
+    },
+    {
+      "fname": "Justin",
+      "lname": "Bieber",
+      "email": "justin@bieber.com",
+      "password": "justin",
+      "username": "justin",
+      "jobTitle": "Singer and composer",
+      "tags": "singer, composer, celebrity",
+      "profilePicURL": "http://static.comicvine.com/uploads/original/14/149534/4661440-9107169598-HiEKWG.jpeg",
+      "id": 7
     }
   ],
   "contacts": []
