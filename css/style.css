@@ -54,8 +54,8 @@ body header nav a:hover {
 }
 
 main .container {
-  width: 1000px;
-  margin: auto;
+  width: auto;
+  margin: 30px 50px 30px 50px;
 }
 
 main .container h2 {
@@ -69,11 +69,15 @@ main .container h2 {
 
 main .container h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
+  font-size: 1.3em;
   padding: 20px 0 20px 0;
   color: #2C3E50;
   margin: auto;
   text-align: center;
+}
+
+main p {
+	font-family: "Raleway", sans-serif;
 }
 
 footer {
