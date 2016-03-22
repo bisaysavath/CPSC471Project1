@@ -1,8 +1,5 @@
-/*landing page*/
-div .info, div .icons {
-	font-family: "Raleway", sans-serif;
-}
 
+/*landing page*/
 .icons{
 	width:60%;
 	margin-left:35%;
@@ -44,17 +41,13 @@ div .info, div .icons {
   margin-bottom:12px;
 }
 #sign_up:hover {
-	background-color: #128f76;
+	background-color: #268AC0;
 }
 
 #sign_up:active {
   background-color: #268AC0;
   box-shadow: 0 5px #666;
   transform: translateY(1px);
-}
-
-.discover-portal:hover {
-	text-decoration: underline;
 }
 
 .container .info a{
