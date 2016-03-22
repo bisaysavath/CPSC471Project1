@@ -1,6 +1,6 @@
 var main = function () {
     "use strict";
-
+    
     var contactContainer = {};
 
     $("body main button").on("click", function () {
@@ -11,9 +11,7 @@ var main = function () {
       $("body main form input").val("");
       $("body main form textarea").val("");
 
-      $.post("http://localhost:3000/contacts", contactContainer, function () {
-         console.log("Contact posted");
-      });
+      console.log(contactContainer);
   });
 }
 

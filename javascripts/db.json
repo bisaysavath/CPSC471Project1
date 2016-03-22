@@ -44,7 +44,7 @@
       "lname": "DiCaprio",
       "email": "leonardo@dicaprio.com",
       "password": "leonardo",
-      "username": "leonardo",
+      "username": "leonardo.me",
       "jobTitle": "Actor",
       "tags": "celebrity, movie, entertainer",
       "profilePicURL": "http://images.boomsbeat.com/data/images/full/32034/422817_original-jpg.jpg",
@@ -83,6 +83,5 @@
       "profilePicURL": "http://static.comicvine.com/uploads/original/14/149534/4661440-9107169598-HiEKWG.jpeg",
       "id": 7
     }
-  ],
-  "contacts": []
+  ]
 }

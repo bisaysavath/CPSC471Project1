@@ -21,23 +21,9 @@ main .container .user-info p {
   color: gray;
   width: 500px;
   margin: auto;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   line-height: 30px;
   text-align: center;
-}
-
-main .container .user-info .user-tags {
-    font-family: "Raleway", sans-serif;
-    font-size: 1.3em;
-    color: gray;
-    width: 500px;
-    margin: auto;
-    padding-bottom: 30px;
-    text-align: center;
-}
-
-main .container .user-info .user-tags span {
-    padding: 0 5px 0 5px;
 }
 
 main .container button {
