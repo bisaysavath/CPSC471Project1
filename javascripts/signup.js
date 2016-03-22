@@ -150,7 +150,7 @@ var main = function (){
 // Credit: http://www.w3schools.com/js/js_cookies.asp
 var setCookieAndLogin = function (cname, cvalue) {
     var d = new Date();
-    d.setTime(d.getTime() + (5*1000)); // cookie is good for 5 seconds
+    d.setTime(d.getTime() + (10*1000)); // cookie is good for 10 seconds
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
 
