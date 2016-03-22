@@ -1,4 +1,5 @@
 var main = function (){
+     console.log(document.cookie);
 
     /*toogling between "login" and "signup" */
     $('.tab a').on('click', function(e) {
@@ -31,7 +32,7 @@ var main = function (){
             $("#loginEmail").val("");
             $("#loginPassword").val("");
 
-            $.getJSON("javascripts/db.json", function(users) {
+            $.getJSON("http://localhost:3000/users", function(users) {
                 console.log(users);
                 var isUserFound = false;
                 users.forEach(function(user) {
@@ -45,26 +46,30 @@ var main = function (){
                             console.log("login succesful!!");
                             //code to display profile of user
 
-                            //removing the login form for now
-                            $(".form").remove();
+                            // //removing the login form for now
+                            // $(".form").remove();
+                            //
+                            // //changing info
+                            // $(".profile-picture").attr("src", user.profilePicURL);
+                            // $(".user-name").text(user.fname + " " + user.lname);
+                            // $(".user-info p").text(user.jobTitle)
+                            // $("#twitterURL").attr("href",user.twitterURL);
+                            // $("#facebookURL").attr("href",user.facebookURL);
+                            //
+                            // $(".profile-page").fadeIn(600);
 
-                            //changing info
-                            $(".profile-picture").attr("src", user.profilePicURL);
-                            $(".user-name").text(user.fname + " " + user.lname);
-                            $(".user-info p").text(user.jobTitle)
-                            $("#twitterURL").attr("href",user.twitterURL);
-                            $("#facebookURL").attr("href",user.facebookURL);
-
-                            $(".profile-page").fadeIn(600);
-
+                            // Set cookie to current user and go to profile
+                            setCookieAndLogin("username", user.username);
                         }
                         else {
-                            console.log("user entered incorrect password");
+                            alert("User entered incorrect password.");
+                            console.log("User entered incorrect password.");
                         }
                     }
                 });
 
                 if (!isUserFound) {
+                    alert("Email has not been registered.");
                     console.log("Email has not been registered.");
                 }
 
@@ -102,7 +107,6 @@ var main = function (){
             var password = $("#password").val();
             var username = $("#username").val();
             var jobTitle = $("#jobTitle").val();
-
             var jobTags = $("#tags").val();
             var profilePic = $("#profilePic").val();
 
@@ -113,7 +117,7 @@ var main = function (){
                 "password": password,
                 "username": username,
                 "jobTitle": jobTitle,
-                "tags": jobTags, // tags are stored as a string due to json-server post problems
+                "tags": jobTags, // tags are stored as a string becase json-server post problems
                 "profilePicURL": profilePic
             };
 
@@ -131,7 +135,6 @@ var main = function (){
                 // Set cookie to current user and go to profile
                 setCookieAndLogin("username", newUser.username);
             });
-
             // if (fname != "" && lname != "" && email != "" && password != "" && username != "" && jobTitle != ""
             // && tags != "" && profilePic != "")
             // {
@@ -151,7 +154,10 @@ var setCookieAndLogin = function (cname, cvalue) {
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
 
+    // Go to profile profile-page
+    window.location.href = "profile.html";
 }
+
 $(document).ready(function(){
     "use strict";
 
