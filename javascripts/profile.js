@@ -8,6 +8,7 @@ var main = function () {
 
     var username = getCookie("username");
     console.log(username);
+    console.log(document.cookie.split(';'));
     // If user hasn't signed in yet, create a main body prompting user to go to signup.html
     if (username == "") {
         // console.log("no");

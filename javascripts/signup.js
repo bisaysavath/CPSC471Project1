@@ -152,7 +152,8 @@ var setCookieAndLogin = function (cname, cvalue) {
     var d = new Date();
     d.setTime(d.getTime() + (180*1000)); // Log in is good for 180 seconds
     var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires + ";login=yes;";
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+    document.cookie = "login=yes";
 
     // Go to profile profile-page
     window.location.href = "profile.html";

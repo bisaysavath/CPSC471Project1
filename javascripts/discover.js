@@ -15,7 +15,8 @@ var main = function () {
 
             // Set img as a link to profile for each user
             $img.on("click", function () {
-                document.cookie = "username=" + user.username + ";login=no;";
+                document.cookie = "username=" + user.username;
+                document.cookie = "login=no";
                 window.location.href = "profile.html";
             });
 
