@@ -13,6 +13,12 @@ var main = function () {
                 "alt" : user.fname + " " + user.lname
             });
 
+            // Set img as a link to profile for each user
+            $img.on("click", function () {
+                document.cookie = "username=" + user.username + ";login=no;";
+                window.location.href = "profile.html";
+            });
+
             // Name
             var $name = $("<h4>").append(user.fname + " " + user.lname);
 
@@ -20,12 +26,18 @@ var main = function () {
             var $title = $("<p>").text = user.jobTitle;
 
             // Tags
-            var tags = "";
+            var tagsString = "";
+            var $tags = $("<p>");
             user.tags.split(",").forEach(function (tag) {
-                tags = tags + " #" + tag;
+
+                // Remove white space from tag
+                if (tag.indexOf(" ") === 0) {
+                    tag = tag.substring(1);
+                }
+                $tags.append($("<span>").append( tagsString + " #" + tag ));
             });
 
-            var $tags = $("<p>").text = tags;
+            // var $tags = $("<span>").text = tags;
 
             $article.append($img, $name, $title, $("<br>"), $tags);
             $("#pinBoot").append($article);

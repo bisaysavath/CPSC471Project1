@@ -7,7 +7,7 @@ var main = function () {
     // var username = (cookie.substring("username=".length, cookie.length - 1));
 
     var username = getCookie("username");
-
+    console.log(username);
     // If user hasn't signed in yet, create a main body prompting user to go to signup.html
     if (username == "") {
         // console.log("no");
@@ -61,7 +61,13 @@ var main = function () {
 
                     // Set user's tags
                     user.tags.split(",").forEach(function (tag) {
-                        var $tagSpan = $("<span>").append( "#" + tag);
+
+                        // Remove white space from tag
+                        if (tag.indexOf(" ") === 0) {
+                            tag = tag.substring(1);
+                        }
+
+                        var $tagSpan = $("<span>").append( " #" + tag);
 
                         $(".user-tags").append($tagSpan);
                     });

@@ -25,6 +25,11 @@ main .container .user-info {
   text-align: center;
 }
 
+main .container .user-tags span:hover {
+  cursor: pointer;
+  color: #18BC9C;
+}
+
 main .container button {
   font-family: "Lato", serif;
   font-size: 1em;

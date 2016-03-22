@@ -17,7 +17,9 @@ main img {
   width: 100%;
   max-width: 100%;
   height: auto;
+  cursor: pointer;
 }
+
 .white-panel {
   position: absolute;
   background: white;
@@ -28,6 +30,17 @@ main img {
 /*
 stylize any heading tags withing white-panel below
 */
+
+article {
+    font-family: "Raleway", sans-serif;
+    color: #2C3E50;
+    text-align: center;
+}
+
+article p span:hover {
+  cursor: pointer;
+  color: #18BC9C;
+}
 
 .white-panel h1 {
   font-size: 1em;
