@@ -103,19 +103,6 @@
       "twitterURL": "https://twitter.com/adele",
       "facebookURL": "https://www.facebook.com/adele",
       "id": 8
-    },
-    {
-      "fname": "Elon",
-      "lname": "Musk",
-      "email": "elon@musk.com",
-      "password": "elon",
-      "username": "elonmusk",
-      "jobTitle": "Serial entrepreneur",
-      "tags": "SpaceX, Tesla, PayPal",
-      "profilePicURL": "http://www.earwolf.com/wp-content/uploads/2013/11/7465-300x300.jpg",
-      "twitterURL": "http://twitter.com/elonmusk",
-      "facebookURL": "http://facebook.com/elonmusk",
-      "id": 9
     }
   ],
   "contacts": []
