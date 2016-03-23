@@ -53,7 +53,7 @@ var main = function () {
                         "href" : user.facebookURL
                     });
                     var $facebookIcon = $("<i>").attr("class", "fa fa-facebook");
-                    $twitterURL.append($facebookIcon);
+                    $facebookURL.append($facebookIcon);
 
                     $(".user-social-media").append($twitterURL, $facebookURL);
 
