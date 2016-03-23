@@ -1,11 +1,44 @@
 // Credit: http://bootsnipp.com/snippets/W06v1
 
 var main = function () {
+    "use strict";
+    
+    // Check cookie if the user is signed in
+    var cookie = document.cookie;
+    var username = cookie.substring("username=".length, cookie.length);
+    
+    // Clear cookies
+    document.cookie = "username=" + username + ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+    
+    console.log(username);
+    console.log(document.cookie);
+    
+    
     $.get("http://localhost:3000/users", function (users) {
 
-        users.forEach(function (user) {
+        var indexArray = [];
+        for(var i = 0; i < users.length; i++) {
+            indexArray.push(i);
+        }
+        
+        // Shuffle indexArray
+        // Credit: http://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript
+        var j, x, i;
+        for (i = indexArray.length; i; i -= 1) {
+            j = Math.floor(Math.random() * i);
+            x = indexArray[i - 1];
+            indexArray[i - 1] = indexArray[j];
+            indexArray[j] = x;
+        }
+
+        var i = 0;
+        users.forEach(function () {
+            
+            var user = users[indexArray[i]];
+            i++;
             // Article
             var $article = $("<article>").attr("class", "white-panel");
+            $article.hide();
 
             // Imgage
             var $img = $("<img>").attr({
@@ -42,6 +75,7 @@ var main = function () {
 
             $article.append($img, $name, $title, $("<br>"), $tags);
             $("#pinBoot").append($article);
+            $article.fadeIn();
         });
     });
 };
