@@ -116,6 +116,18 @@
       "twitterURL": "http://twitter.com/tim_cook",
       "facebookURL": "http://facebook.com/tim_cook",
       "id": 9
+    },
+    {
+      "fname": "Elon",
+      "lname": "Musk",
+      "email": "elon@musk.com",
+      "password": "elon",
+      "username": "elonmusk",
+      "jobTitle": "Tesla, Space X, Solar City & Paypal",
+      "tags": "Entrepreneur, tech, space",
+      "profilePicURL": "http://5372-presscdn-0-77.pagely.netdna-cdn.com/wp-content/uploads/2015/05/elon-musk.jpg",
+      "twitterURL": "http://twitter.com/elonmusk",
+      "facebookURL": "http://facebook.com/elonmusk"
     }
   ],
   "contacts": [

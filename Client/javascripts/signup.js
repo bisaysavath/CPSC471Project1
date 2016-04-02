@@ -102,13 +102,30 @@ var main = function (){
             $("#twitter").val("");
             $("#facebook").val("");
             
-            $.post("/users", newUser, function () {
-                // Set cookie to current user
-                setCookie("username", newUser.username, true);
+            // Node.js server requires ajax to post
+            $.ajax
+            ({
+                type: 'post',
+                url: '/users',
+                contentType: 'application/json',
+                data: JSON.stringify(newUser),
+                success: function(){
+                    console.log("Contact posted");
+                    // Set cookie to current user
+                    setCookie("username", newUser.username, true);
+                    
+                    // Go to profile profile-page
+                    window.location.href = "profile.html";
+                }
+            })
+            
+            // $.post("/users", newUser, function () {
+            //     // Set cookie to current user
+            //     setCookie("username", newUser.username, true);
                 
-                // Go to profile profile-page
-                window.location.href = "profile.html";
-            });
+            //     // Go to profile profile-page
+            //     window.location.href = "profile.html";
+            // });
         }
     });
 }

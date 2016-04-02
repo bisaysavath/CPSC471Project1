@@ -47,8 +47,6 @@ var main = function () {
                 $tags.append($("<span>").append( tagsString + " #" + tag ));
             });
 
-            // var $tags = $("<span>").text = tags;
-
             $article.append($img, $name, $title, $("<br>"), $tags);
             $("#pinBoot").append($article);
             $article.fadeIn();

@@ -23,10 +23,6 @@ var main = function () {
                console.log("Contact posted");
            }
        })
-
-    //   $.post("/contacts", contactContainer, function () {
-    //      console.log("Contact posted");
-    //   });
   });
 }
 
