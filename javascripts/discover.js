@@ -4,17 +4,10 @@ var main = function () {
     "use strict";
     
     // Check cookie if the user is signed in
-    // var cookie = document.cookie;
-    // var username = cookie.substring("username=".length, cookie.length);
     var username = getCookie("username");
     
     // Clear cookies
-    // document.cookie = "username=" + username + ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
-    deleteCookie("username", username);
-    
-    // console.log(username);
-    // console.log(document.cookie);
-    
+    // deleteCookie("username", username);
     
     $.get("http://localhost:3000/users", function (users) {
 
@@ -32,11 +25,7 @@ var main = function () {
 
             // Set img as a link to profile for each user
             $img.on("click", function () {
-                // document.cookie = "username=" + getUser.username;
-                // document.cookie = "login=no";
-                setCookie("username", "taylorswift", false);
-                // setCookie("login", "no");
-                
+                setCookie("username", getUser.username, false);
                 window.location.href = "profile.html";
             });
 

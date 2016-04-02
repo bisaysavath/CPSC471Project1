@@ -44,7 +44,7 @@ var main = function (){
                             console.log("login succesful!!");
 
                             // Set cookie to current user
-                            setCookie("username", user.username);
+                            setCookie("username", user.username, true);
                             
                             // Go to profile profile-page
                             window.location.href = "profile.html";
@@ -104,7 +104,7 @@ var main = function (){
             
             $.post("http://localhost:3000/users", newUser, function () {
                 // Set cookie to current user
-                setCookie("username", newUser.username);
+                setCookie("username", newUser.username, true);
                 
                 // Go to profile profile-page
                 window.location.href = "profile.html";
