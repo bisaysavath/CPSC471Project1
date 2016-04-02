@@ -48,6 +48,8 @@
       "jobTitle": "Actor",
       "tags": "celebrity, movie, entertainer",
       "profilePicURL": "http://images.boomsbeat.com/data/images/full/32034/422817_original-jpg.jpg",
+      "twitterURL": "https://twitter.com/LeoDiCaprio",
+      "facebookURL": "https://www.facebook.com/LeonardoDiCaprio",
       "id": 4
     },
     {
@@ -59,17 +61,21 @@
       "jobTitle": "Actor",
       "tags": "Entertainer",
       "profilePicURL": "http://images.intouchweekly.com/uploads/posts/image/35654/brad-pitt-oscar-dog-poop.jpg",
+      "twitterURL": "https://twitter.com/personalbrad",
+      "facebookURL": "https://www.facebook.com/BradPittAngelinaJolie/",
       "id": 5
     },
     {
       "fname": "Ryan",
-      "lname": "James",
-      "email": "ryan@james.com",
+      "lname": "Reynolds",
+      "email": "ryan@reynolds.com",
       "password": "ryan",
       "username": "ryan",
       "jobTitle": "Actor",
       "tags": "Entertainer, movie, celebrity",
       "profilePicURL": "http://marieclaire.media.ipcdigital.co.uk/11116/00008b20a/dc6c/Ryan-Reynolds-James.jpg",
+      "twitterURL": "https://twitter.com/VancityReynolds",
+      "facebookURL": "https://www.facebook.com/VancityReynolds/",
       "id": 6
     },
     {
@@ -81,6 +87,8 @@
       "jobTitle": "Singer and composer",
       "tags": "singer, composer, celebrity",
       "profilePicURL": "http://static.comicvine.com/uploads/original/14/149534/4661440-9107169598-HiEKWG.jpeg",
+      "twitterURL": "https://twitter.com/justinbieber",
+      "facebookURL": "https://www.facebook.com/justinbieber",
       "id": 7
     },
     {
@@ -92,6 +100,8 @@
       "jobTitle": "Singer",
       "tags": "singer, composer",
       "profilePicURL": "https://pbs.twimg.com/profile_images/672996976347111426/aMbJuAki.jpg",
+      "twitterURL": "https://twitter.com/adele",
+      "facebookURL": "https://www.facebook.com/adele",
       "id": 8
     }
   ],

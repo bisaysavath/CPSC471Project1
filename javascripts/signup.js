@@ -99,7 +99,7 @@ var main = function (){
 
         }
         else {
-            console.log("I am processing a new user");
+            console.log("I am processing a new user TEST TEST");
 
             var fname = $("#fname").val();
             var lname = $("#lname").val();
@@ -109,7 +109,9 @@ var main = function (){
             var jobTitle = $("#jobTitle").val();
             var jobTags = $("#tags").val();
             var profilePic = $("#profilePic").val();
-
+            var twitterURL = "http://twitter.com/" + $("#twitter").val();
+            var facebookURL = "http://facebook.com/" + $("#facebook").val();
+            
             var newUser = {
                 "fname": fname,
                 "lname": lname,
@@ -118,7 +120,9 @@ var main = function (){
                 "username": username,
                 "jobTitle": jobTitle,
                 "tags": jobTags, // tags are stored as a string becase json-server post problems
-                "profilePicURL": profilePic
+                "profilePicURL": profilePic,
+                "twitterURL": twitterURL,
+                "facebookURL": facebookURL
             };
 
             // Clearing all the input values
@@ -130,7 +134,9 @@ var main = function (){
             $("#jobTitle").val("");
             $("#tags").val("");
             $("#profilePic").val("");
-
+            $("#twitter").val("");
+            $("#facebook").val("");
+            
             $.post("http://localhost:3000/users", newUser, function () {
                 // Set cookie to current user and go to profile
                 setCookieAndLogin("username", newUser.username);
