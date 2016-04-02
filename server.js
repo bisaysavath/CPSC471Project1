@@ -1,52 +1,68 @@
+var findUsersById = function (id, callback) {
+    database.users.forEach( function (user) {
+        if (user.id == id) {
+            return callback(user);
+        }
+    });
+};
+
+var readDB = function () {
+    fs.readFile("db.json", "utf8", function (err, data) {
+        if (err) throw err;
+        database = JSON.parse(data);
+    });
+}
+
+var writeDB = function () {
+    fs.writeFile("db.json", JSON.stringify(database, null, 2),"utf8", (err) => {
+        if (err) throw err;
+            console.log("Database saved!");
+    });
+};
+
 var express = require("express"),
     bodyParser = require("body-parser"),
-    http = require("http"),
     app = express(),
-    database = require("./db.json");
+    fs = require("fs"),
+    database;
 
-    app.use(express.static(__dirname + "/client"));
-    console.log(__dirname);
-    http.createServer(app).listen(3000);
-    
-    // parse application/json
-    app.use(bodyParser.json());
+readDB();
 
-    app.get("/", function (req, res) {
-      res.send("This is the root route!");
-    })
+// parse application/json
+app.use(bodyParser.json());
 
-    app.get("/hello", function (req, res) {
-      res.send("Hello World!");
-    });
+app.use(express.static(__dirname + "/client"));
 
-    app.get("/goodbye", function (req, res) {
-      res.send("Goodbye World!");
-    });
-    
-    app.get("/users", function (req, res) {
-       res.json(database.users); 
-    });
-    
-    app.post("/users", function (req, res) {
-       var newUser = req.body;
-       database.users.push(newUser);
-    });
-    
-    app.get("/users/:id", function (req, res) {
-        var id = req.params.id;
-        findUsersById(id, function (user) {
-            res.json(user);
-        });
-    });
-    
-    var findUsersById = function (id, callback) {
-        database.users.forEach( function (user) {
-            if (user.id == id) {
-                return callback(user);
-            }
-        });
-    };
+app.listen(3000);
+console.log("Server is listening at 3000");
 
-    // app.get("/index.html", function (req, res) {
-    //   res.send("<html><head></head><body><h1>Hello World!</h1>,</body></html>");
-    // })
+app.get("/contacts", function (req, res) {
+    res.json(database.contacts);
+});
+
+app.post("/contacts", function (req, res) {
+    "use strict";
+
+    var newContact = req.body;
+    database.contacts.push(newContact);
+    writeDB();
+    res.send("Contact posted");
+});
+
+app.get("/users", function (req, res) {
+    res.json(database.users); 
+});
+
+app.post("/users", function (req, res) {
+    var newUser = req.body;
+    database.users.push(newUser);
+    writeDB();
+    res.send("New user added");
+});
+
+app.get("/users/:id", function (req, res) {
+    var id = req.params.id;
+    findUsersById(id, function (user) {
+        res.json(user);
+    });
+});

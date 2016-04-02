@@ -17,7 +17,7 @@ var main = function () {
     }
     else // Load that specific info about user from db.json
     {
-        $.get("http://localhost:3000/users", function (users) {
+        $.get("/users", function (users) {
             users.forEach(function (user) {
                 if (user.username === username) {
                     // Load profile picture

@@ -10,10 +10,23 @@ var main = function () {
       contactContainer.message = ($("body main form .input-message").val());
       $("body main form input").val("");
       $("body main form textarea").val("");
+      
+      console.log("Clicked");
 
-      $.post("http://localhost:3000/contacts", contactContainer, function () {
-         console.log("Contact posted");
-      });
+      $.ajax
+       ({
+           type: 'post',
+           url: '/contacts',
+           contentType: 'application/json',
+           data: JSON.stringify(contactContainer),
+           success: function(){
+               console.log("Contact posted");
+           }
+       })
+
+    //   $.post("/contacts", contactContainer, function () {
+    //      console.log("Contact posted");
+    //   });
   });
 }
 

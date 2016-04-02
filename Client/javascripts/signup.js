@@ -30,7 +30,7 @@ var main = function (){
             $("#loginEmail").val("");
             $("#loginPassword").val("");
 
-            $.getJSON("http://localhost:3000/users", function(users) {
+            $.get("/users", function(users) {
                 console.log(users);
                 var isUserFound = false;
                 users.forEach(function(user) {
@@ -102,7 +102,7 @@ var main = function (){
             $("#twitter").val("");
             $("#facebook").val("");
             
-            $.post("http://localhost:3000/users", newUser, function () {
+            $.post("/users", newUser, function () {
                 // Set cookie to current user
                 setCookie("username", newUser.username, true);
                 
