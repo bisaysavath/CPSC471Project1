@@ -1,14 +1,10 @@
 var main = function () {
     "use strict";
 
-    // var cookie = document.cookie;
-    //
-    // // Get a username in a cookie and grab only a username
-    // var username = (cookie.substring("username=".length, cookie.length - 1));
-
     var username = getCookie("username");
     console.log(username);
     console.log(document.cookie.split(';'));
+    
     // If user hasn't signed in yet, create a main body prompting user to go to signup.html
     if (username == "") {
         // console.log("no");
@@ -82,15 +78,15 @@ var main = function () {
     });
 };
 
-var getCookie = function(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-    }
-    return "";
-}
+// var getCookie = function(cname) {
+//     var name = cname + "=";
+//     var ca = document.cookie.split(';');
+//     for(var i=0; i<ca.length; i++) {
+//         var c = ca[i];
+//         while (c.charAt(0)==' ') c = c.substring(1);
+//         if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+//     }
+//     return "";
+// }
 
 $(document).ready(main);

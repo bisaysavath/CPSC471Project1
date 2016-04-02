@@ -4,65 +4,52 @@ var main = function () {
     "use strict";
     
     // Check cookie if the user is signed in
-    var cookie = document.cookie;
-    var username = cookie.substring("username=".length, cookie.length);
+    // var cookie = document.cookie;
+    // var username = cookie.substring("username=".length, cookie.length);
+    var username = getCookie("username");
     
     // Clear cookies
-    document.cookie = "username=" + username + ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+    // document.cookie = "username=" + username + ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+    deleteCookie("username", username);
     
-    console.log(username);
-    console.log(document.cookie);
+    // console.log(username);
+    // console.log(document.cookie);
     
     
     $.get("http://localhost:3000/users", function (users) {
 
-        var indexArray = [];
-        for(var i = 0; i < users.length; i++) {
-            indexArray.push(i);
-        }
-        
-        // Shuffle indexArray
-        // Credit: http://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array-in-javascript
-        var j, x, i;
-        for (i = indexArray.length; i; i -= 1) {
-            j = Math.floor(Math.random() * i);
-            x = indexArray[i - 1];
-            indexArray[i - 1] = indexArray[j];
-            indexArray[j] = x;
-        }
-
-        var i = 0;
-        users.forEach(function () {
-            
-            var user = users[indexArray[i]];
-            i++;
+        var user = _.sample(users, 8);
+        user.forEach(function (getUser) {
             // Article
             var $article = $("<article>").attr("class", "white-panel");
             $article.hide();
 
             // Imgage
             var $img = $("<img>").attr({
-                "src" : user.profilePicURL,
-                "alt" : user.fname + " " + user.lname
+                "src" : getUser.profilePicURL,
+                "alt" : getUser.fname + " " + getUser.lname
             });
 
             // Set img as a link to profile for each user
             $img.on("click", function () {
-                document.cookie = "username=" + user.username;
-                document.cookie = "login=no";
+                // document.cookie = "username=" + getUser.username;
+                // document.cookie = "login=no";
+                setCookie("username", "taylorswift", false);
+                // setCookie("login", "no");
+                
                 window.location.href = "profile.html";
             });
 
             // Name
-            var $name = $("<h4>").append(user.fname + " " + user.lname);
+            var $name = $("<h4>").append(getUser.fname + " " + getUser.lname);
 
             // Job title
-            var $title = $("<p>").text = user.jobTitle;
+            var $title = $("<p>").text = getUser.jobTitle;
 
             // Tags
             var tagsString = "";
             var $tags = $("<p>");
-            user.tags.split(",").forEach(function (tag) {
+            getUser.tags.split(",").forEach(function (tag) {
 
                 // Remove white space from tag
                 if (tag.indexOf(" ") === 0) {

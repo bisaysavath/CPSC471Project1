@@ -1,5 +1,4 @@
 var main = function (){
-     console.log(document.cookie);
 
     /*toogling between "login" and "signup" */
     $('.tab a').on('click', function(e) {
@@ -17,7 +16,6 @@ var main = function (){
         $(target).fadeIn(600);
 
     });
-
 
     $("button").on("click", function(){
 
@@ -44,22 +42,12 @@ var main = function (){
 
                         if (user.password === loginPassword) {
                             console.log("login succesful!!");
-                            //code to display profile of user
 
-                            // //removing the login form for now
-                            // $(".form").remove();
-                            //
-                            // //changing info
-                            // $(".profile-picture").attr("src", user.profilePicURL);
-                            // $(".user-name").text(user.fname + " " + user.lname);
-                            // $(".user-info p").text(user.jobTitle)
-                            // $("#twitterURL").attr("href",user.twitterURL);
-                            // $("#facebookURL").attr("href",user.facebookURL);
-                            //
-                            // $(".profile-page").fadeIn(600);
-
-                            // Set cookie to current user and go to profile
-                            setCookieAndLogin("username", user.username);
+                            // Set cookie to current user
+                            setCookie("username", user.username);
+                            
+                            // Go to profile profile-page
+                            window.location.href = "profile.html";
                         }
                         else {
                             alert("User entered incorrect password.");
@@ -74,29 +62,6 @@ var main = function (){
                 }
 
             });
-
-            //  var url = "http://localhost:3000/users";
-            // $.get(url, function (users){
-
-            //     var isUserFound = false;
-            //     users.forEach(function(user){
-
-            //         if (user.email === loginEmail){
-
-            //             isUserFound = true;
-            //             console.log("user email found!");
-
-            //             if (user.password === loginPassword)
-            //             {
-            //                 console.log("login succesful!!");
-            //             }
-            //             else{
-            //                 console.log("user entered incorrect password");
-            //             }
-            //         }
-            //     })
-            // });
-
         }
         else {
             console.log("I am processing a new user TEST TEST");
@@ -138,31 +103,14 @@ var main = function (){
             $("#facebook").val("");
             
             $.post("http://localhost:3000/users", newUser, function () {
-                // Set cookie to current user and go to profile
-                setCookieAndLogin("username", newUser.username);
+                // Set cookie to current user
+                setCookie("username", newUser.username);
+                
+                // Go to profile profile-page
+                window.location.href = "profile.html";
             });
-            // if (fname != "" && lname != "" && email != "" && password != "" && username != "" && jobTitle != ""
-            // && tags != "" && profilePic != "")
-            // {
-            //     $.("http://localhost:3000/users", newUser);
-            // }
-            // else{
-            //     console.log("didn't ");
-            // }
         }
     });
-}
-
-// Credit: http://www.w3schools.com/js/js_cookies.asp
-var setCookieAndLogin = function (cname, cvalue) {
-    var d = new Date();
-    d.setTime(d.getTime() + (180*1000)); // Log in is good for 180 seconds
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-    document.cookie = "login=yes";
-
-    // Go to profile profile-page
-    window.location.href = "profile.html";
 }
 
 $(document).ready(function(){
