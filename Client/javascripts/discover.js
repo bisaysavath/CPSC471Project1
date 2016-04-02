@@ -9,7 +9,7 @@ var main = function () {
     // Clear cookies
     // deleteCookie("username", username);
     
-    $.get("http://localhost:3000/users", function (users) {
+    $.get("/users", function (users) {
 
         var user = _.sample(users, 8);
         user.forEach(function (getUser) {
