@@ -9,9 +9,9 @@
       "twitterURL": "https://twitter.com/taylorswift13",
       "facebookURL": "https://www.facebook.com/TaylorSwift",
       "tags": [
-          "singer",
-          "entertainer",
-          "artist"
+        "singer",
+        "entertainer",
+        "artist"
       ],
       "email": "taylor@swift.com",
       "username": "taylorswift",
@@ -26,13 +26,13 @@
       "twitterURL": "https://twitter.com/calvinharris",
       "facebookURL": "https://www.facebook.com/calvinharris/",
       "tags": [
-          "DJ",
-          "singer",
-          "songwriter",
-          "producer",
-          "recording",
-          "artist",
-          "remixer"
+        "DJ",
+        "singer",
+        "songwriter",
+        "producer",
+        "recording",
+        "artist",
+        "remixer"
       ],
       "email": "calvin@harris.com",
       "username": "calvinharris",
@@ -47,9 +47,9 @@
       "twitterURL": "https://twitter.com/elliegoulding",
       "facebookURL": "https://www.facebook.com/elliegoulding",
       "tags": [
-          "singer",
-          "entertainer",
-          "artist"
+        "singer",
+        "entertainer",
+        "artist"
       ],
       "email": "ellie@goulding.com",
       "username": "elliegoulding",
@@ -63,9 +63,9 @@
       "username": "leonardo",
       "jobTitle": "Actor",
       "tags": [
-          "celebrity",
-          "movie",
-          "entertainer"
+        "celebrity",
+        "movie",
+        "entertainer"
       ],
       "profilePicURL": "http://images.boomsbeat.com/data/images/full/32034/422817_original-jpg.jpg",
       "twitterURL": "https://twitter.com/LeoDiCaprio",
@@ -80,7 +80,7 @@
       "username": "brad",
       "jobTitle": "Actor",
       "tags": [
-          "entertainer"
+        "entertainer"
       ],
       "profilePicURL": "http://images.intouchweekly.com/uploads/posts/image/35654/brad-pitt-oscar-dog-poop.jpg",
       "twitterURL": "https://twitter.com/personalbrad",
@@ -95,9 +95,9 @@
       "username": "ryan",
       "jobTitle": "Actor",
       "tags": [
-          "entertainer",
-          "movie",
-          "celebrity"
+        "entertainer",
+        "movie",
+        "celebrity"
       ],
       "profilePicURL": "http://marieclaire.media.ipcdigital.co.uk/11116/00008b20a/dc6c/Ryan-Reynolds-James.jpg",
       "twitterURL": "https://twitter.com/VancityReynolds",
@@ -112,9 +112,9 @@
       "username": "justin",
       "jobTitle": "Singer and composer",
       "tags": [
-            "singer",
-            "composer",
-            "celebrity"
+        "singer",
+        "composer",
+        "celebrity"
       ],
       "profilePicURL": "http://static.comicvine.com/uploads/original/14/149534/4661440-9107169598-HiEKWG.jpeg",
       "twitterURL": "https://twitter.com/justinbieber",
@@ -129,8 +129,8 @@
       "username": "adele",
       "jobTitle": "Singer",
       "tags": [
-          "singer",
-          "composer"
+        "singer",
+        "composer"
       ],
       "profilePicURL": "https://pbs.twimg.com/profile_images/672996976347111426/aMbJuAki.jpg",
       "twitterURL": "https://twitter.com/adele",
@@ -145,8 +145,8 @@
       "username": "tim",
       "jobTitle": "Apple CEO",
       "tags": [
-          "entrepreneur",
-          "tech"
+        "entrepreneur",
+        "tech"
       ],
       "profilePicURL": "https://pbs.twimg.com/profile_images/378800000483764274/ebce94fb34c055f3dc238627a576d251.jpeg",
       "twitterURL": "http://twitter.com/tim_cook",
@@ -161,9 +161,9 @@
       "username": "elonmusk",
       "jobTitle": "Tesla, Space X, Solar City & Paypal",
       "tags": [
-          "entrepreneur",
-          "tech",
-          "space"
+        "entrepreneur",
+        "tech",
+        "space"
       ],
       "profilePicURL": "http://5372-presscdn-0-77.pagely.netdna-cdn.com/wp-content/uploads/2015/05/elon-musk.jpg",
       "twitterURL": "http://twitter.com/elonmusk",

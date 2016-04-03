@@ -2,8 +2,7 @@ var main = function () {
     "use strict";
 
     var username = getCookie("username");
-    console.log(username);
-    console.log(document.cookie.split(';'));
+    var editMode = false;
     
     // If user hasn't signed in yet, create a main body prompting user to go to signup.html
     if (username == "") {
@@ -69,6 +68,19 @@ var main = function () {
 
                         $(".user-tags").append($tagSpan);
                     });
+                    
+                    var isLogIn = getCookie("login");
+                    
+                    if (isLogIn === "yes") {
+                        var $editButton = $("<button>").append("Edit");
+                        
+                        $editButton.on("click", function () {
+                            updateProfile(user);
+                        });
+                        
+                        $("main .edit-button").append($editButton);
+                    }
+                    
                 }
             });
         });
@@ -77,6 +89,110 @@ var main = function () {
     $("main .container .user-title button").on("click", function () {
         window.location.href = "login.html";
     });
+};
+
+var updateProfile = function (user) {
+    // Clear the page
+    $("main .container").empty();
+    $("main .container").hide();
+    
+    // Name and lastname input
+    
+    var $fnameLabel = $("<h3>").append("First name");
+    
+    var $fname = $("<input>").attr({
+        "class": "edit-user-fname",
+        "type": "text",
+        "value" : user.fname
+    });
+    
+    var $lnameLabel = $("<h3>").append("Last name");
+    
+    var $lname = $("<input>").attr({
+        "class": "edit-user-lname",
+        "type": "text",
+        "value" : user.lname
+    });
+    
+    var $jobTitleLabel = $("<h3>").append("Job title");
+    
+    var $jobTitle = $("<input>").attr({
+        "class": "edit-user-jobTitle",
+        "type": "text",
+        "value" : user.jobTitle
+    });
+    
+    var $profileURLLabel = $("<h3>").append("Profile picture URL");
+    
+    var $profileURL = $("<input>").attr({
+        "class": "edit-user-profilePicURL",
+        "type": "text",
+        "value" : user.profilePicURL
+    });
+    
+    var $tagLabel = $("<h3>").append("Tags");
+    var stringTag = user.tags.join(", ");
+    var $tag = $("<input>").attr({
+        "class": "edit-user-tag",
+        "type": "text",
+        "value" : stringTag
+    });
+    
+    var $cancelButton = $("<button>").append("Cancel").attr("id", "cancleButton");
+    
+    $cancelButton.on("click", function () {
+         window.location.reload();
+    });
+    
+    var $submitButton = $("<button>").append("Submit").attr("id", "submitButton");
+    
+    $submitButton.on("click", function () {
+
+        console.log("submited");
+        var url = "/users/" + user.id;
+        
+        var jobTagsArray = $tag.val().split(",");
+            
+            for(index = 0; index < jobTagsArray.length; index++) {
+                var tempString = jobTagsArray[index];
+                if(tempString.indexOf(" ") === 0) {
+                    jobTagsArray[index] = tempString.substring(1);
+                }
+            }
+        
+        var newUser = {
+            "id": user.id,
+            "fname": $fname.val(),
+            "lname": $lname.val(),
+            "jobTitle": $jobTitle.val(),
+            "profilePicURL": $profileURL.val(),
+            "twitterURL": user.twitterURL,
+            "facebookURL": user.facebookURL,
+            "tags": jobTagsArray,
+            "email": user.email,
+            "username": user.username,
+            "password": user.password
+        };
+        
+        $.ajax
+            ({
+                type: 'post',
+                url: url,
+                contentType: 'application/json',
+                data: JSON.stringify(newUser),
+                success: function(){
+                    console.log("Profile updated");
+                    
+                    // Reload profile-page
+                    window.location.reload();
+                }
+            })
+    });
+    
+    $("main .container").append($("<span>").append($fnameLabel, $fname, $lnameLabel, $lname,
+    $jobTitleLabel, $jobTitle, $profileURLLabel, $profileURL, $tagLabel, $tag, $("<br>"),
+    $cancelButton, $submitButton));
+    $("main .container").slideDown();
 };
 
 $(document).ready(main);

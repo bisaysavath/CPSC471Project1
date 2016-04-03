@@ -37,6 +37,8 @@ app.listen(3000);
 console.log("Server is listening at 3000");
 
 app.get("/contacts", function (req, res) {
+    "use strict";
+    
     res.json(database.contacts);
 });
 
@@ -50,10 +52,14 @@ app.post("/contacts", function (req, res) {
 });
 
 app.get("/users", function (req, res) {
+    "use strict";
+    
     res.json(database.users); 
 });
 
 app.post("/users", function (req, res) {
+    "use strict";
+    
     var newUser = req.body;
     database.users.push(newUser);
     writeDB();
@@ -61,8 +67,25 @@ app.post("/users", function (req, res) {
 });
 
 app.get("/users/:id", function (req, res) {
+    "use strict";
+    
     var id = req.params.id;
     findUsersById(id, function (user) {
         res.json(user);
     });
+});
+
+app.post("/users/:id", function (req, res) {
+    "use strict";
+    
+    var id = req.params.id;
+    
+    findUsersById(id, function (user) {
+        var indexToUpdate = database.users.indexOf(user);
+        database.users[indexToUpdate] = req.body;
+    });
+    
+    writeDB();
+    
+    res.send("Update profile succeeded");
 });
