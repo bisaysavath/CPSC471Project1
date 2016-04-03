@@ -61,6 +61,8 @@ app.post("/users", function (req, res) {
     "use strict";
     
     var newUser = req.body;
+    var getId = database.users.length + 1;
+    newUser.id = getId;
     database.users.push(newUser);
     writeDB();
     res.send("New user added");

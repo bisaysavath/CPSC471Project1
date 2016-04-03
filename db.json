@@ -167,7 +167,8 @@
       ],
       "profilePicURL": "http://5372-presscdn-0-77.pagely.netdna-cdn.com/wp-content/uploads/2015/05/elon-musk.jpg",
       "twitterURL": "http://twitter.com/elonmusk",
-      "facebookURL": "http://facebook.com/elonmusk"
+      "facebookURL": "http://facebook.com/elonmusk",
+      "id": 10
     },
     {
       "fname": "Bill",
@@ -183,7 +184,25 @@
       ],
       "profilePicURL": "http://myhero.com/images/guest/g243/hero106692/bill%20gates.jpeg",
       "twitterURL": "http://twitter.com/BillGates",
-      "facebookURL": "http://facebook.com/BillGates"
+      "facebookURL": "http://facebook.com/BillGates",
+      "id": 11
+    },
+    {
+      "id": 12,
+      "fname": "Katy",
+      "lname": "Perry",
+      "jobTitle": "Singer",
+      "profilePicURL": "http://artcreationforever.com/images/katy-perry/katy-perry-04.jpg",
+      "twitterURL": "http://twitter.com/katyperry",
+      "facebookURL": "http://facebook.com/",
+      "tags": [
+        "entertainer",
+        "music",
+        "composer"
+      ],
+      "email": "katy@perry.com",
+      "username": "katyperry",
+      "password": "katy"
     }
   ],
   "contacts": [
