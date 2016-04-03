@@ -1,5 +1,5 @@
 var main = function() {
-    "use strict";
+    // "use strict";
 
     /*toogling between "login" and "signup" */
     $(".tab a").on("click", function(e) {

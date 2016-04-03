@@ -192,7 +192,7 @@
       "fname": "Katy",
       "lname": "Perry",
       "jobTitle": "Singer",
-      "profilePicURL": "http://artcreationforever.com/images/katy-perry/katy-perry-04.jpg",
+      "profilePicURL": "http://www.allthetests.com/quiz32/picture/pic_1423339389_1.jpg",
       "twitterURL": "http://twitter.com/katyperry",
       "facebookURL": "http://facebook.com/",
       "tags": [
@@ -203,6 +203,22 @@
       "email": "katy@perry.com",
       "username": "katyperry",
       "password": "katy"
+    },
+    {
+      "id": 13,
+      "fname": "Steve",
+      "lname": "Jobs",
+      "jobTitle": "Inventor",
+      "profilePicURL": "http://www.tonsofbuzz.com/wp-content/uploads/2016/01/steve-jobs.jpg",
+      "twitterURL": "http://twitter.com/",
+      "facebookURL": "http://facebook.com/",
+      "tags": [
+        "entrepreneur",
+        "tech"
+      ],
+      "email": "steve@jobs.com",
+      "username": "stevejobs",
+      "password": "steve"
     }
   ],
   "contacts": [
