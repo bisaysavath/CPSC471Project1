@@ -77,6 +77,16 @@ var main = function (){
             var twitterURL = "http://twitter.com/" + $("#twitter").val();
             var facebookURL = "http://facebook.com/" + $("#facebook").val();
             
+            // Turn tags to array and remove any whitespaces
+            var jobTagsArray = jobTags.split(",");
+            
+            for(index = 0; index < jobTagsArray.length; index++) {
+                var tempString = jobTagsArray[index];
+                if(tempString.indexOf(" ") === 0) {
+                    jobTagsArray[index] = tempString.substring(1);
+                }
+            }
+            
             var newUser = {
                 "fname": fname,
                 "lname": lname,
@@ -84,7 +94,7 @@ var main = function (){
                 "password": password,
                 "username": username,
                 "jobTitle": jobTitle,
-                "tags": jobTags, // tags are stored as a string becase json-server post problems
+                "tags": jobTagsArray,
                 "profilePicURL": profilePic,
                 "twitterURL": twitterURL,
                 "facebookURL": facebookURL

@@ -1,17 +1,28 @@
-// Credit: http://bootsnipp.com/snippets/W06v1
-
 var main = function () {
     "use strict";
     
-    // Check cookie if the user is signed in
-    var username = getCookie("username");
-    
-    // Clear cookies
-    // deleteCookie("username", username);
+    // Check cookie for a tag
+    var getTag = getCookie("tag");
     
     $.get("/users", function (users) {
 
-        var user = _.sample(users, 8);
+        var user = [];
+
+        // If users click on a tag, display only profile associate with that tag
+        if(getTag !== "") {
+            users.forEach( function (profile) {
+               if(_.contains(profile.tags, getTag)) {
+                   console.log("True = " + getTag);
+                   user.push(profile);
+               }
+            });
+        }
+        
+        // If users didn't look for particular hashtag, then display 8 random profiles
+        if(_.isEmpty(user)) {
+            user = _.sample(users, 8);
+        }
+        
         user.forEach(function (getUser) {
             // Article
             var $article = $("<article>").attr("class", "white-panel");
@@ -33,25 +44,31 @@ var main = function () {
             var $name = $("<h4>").append(getUser.fname + " " + getUser.lname);
 
             // Job title
-            var $title = $("<p>").text = getUser.jobTitle;
+            var $title = $("<p>").append = getUser.jobTitle;
 
             // Tags
-            var tagsString = "";
             var $tags = $("<p>");
-            getUser.tags.split(",").forEach(function (tag) {
-
-                // Remove white space from tag
-                if (tag.indexOf(" ") === 0) {
-                    tag = tag.substring(1);
-                }
-                $tags.append($("<span>").append( tagsString + " #" + tag ));
+            getUser.tags.forEach(function (tag) {
+                
+                var $span = $("<span>").append( " #" + tag );
+                
+                $span.on("click", function () {
+                    // If tags are clicked, set cookie to hold on that tag
+                    setCookie("tag", tag);
+                    window.location.reload();
+                });
+                
+                $tags.append($span);
             });
 
-            $article.append($img, $name, $title, $("<br>"), $tags);
+            $article.append($img, $name, $title, $tags);
             $("#pinBoot").append($article);
             $article.fadeIn();
         });
     });
+
+    // Reset tag cookie at the end
+    deleteCookie("tag", getTag);
 };
 
 $(document).ready(function() {
@@ -64,6 +81,8 @@ margin_bottom: 50,
 single_column_breakpoint: 700
 });
 });
+
+// Credit: http://bootsnipp.com/snippets/W06v1
 
 /*
 Ref:

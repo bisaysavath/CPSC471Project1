@@ -55,18 +55,6 @@ var getCookie = function (cname) {
     return "";
 }
 
-var checkCookie = function () {
-    var user = getCookie("username");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-        user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) {
-            setCookie("username", user, 365);
-        }
-    }
-}
-
 var deleteCookie = function (cname, cvalue) {
     document.cookie = cname + "=" + cvalue + ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
 }

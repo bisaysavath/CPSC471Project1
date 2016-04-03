@@ -8,7 +8,11 @@
       "profilePicURL": "http://www.marketingdirecto.com/wp-content/uploads/2016/02/Taylor-Swift2.jpg",
       "twitterURL": "https://twitter.com/taylorswift13",
       "facebookURL": "https://www.facebook.com/TaylorSwift",
-      "tags": "singer, entertainer, artist",
+      "tags": [
+          "singer",
+          "entertainer",
+          "artist"
+      ],
       "email": "taylor@swift.com",
       "username": "taylorswift",
       "password": "taylor"
@@ -21,7 +25,15 @@
       "profilePicURL": "https://lh4.googleusercontent.com/-y6KijhnTZPw/AAAAAAAAAAI/AAAAAAAAGL4/RO2Ojg1nG78/s0-c-k-no-ns/photo.jpg",
       "twitterURL": "https://twitter.com/calvinharris",
       "facebookURL": "https://www.facebook.com/calvinharris/",
-      "tags": "DJ, singer, songwriter, producer, recording, artist, remixer",
+      "tags": [
+          "DJ",
+          "singer",
+          "songwriter",
+          "producer",
+          "recording",
+          "artist",
+          "remixer"
+      ],
       "email": "calvin@harris.com",
       "username": "calvinharris",
       "password": "calvin"
@@ -34,7 +46,11 @@
       "profilePicURL": "https://fazmusic17.org/wp-content/uploads/2016/01/Ellie-Goulding-For-Marie-Claire-6-thumb.jpg",
       "twitterURL": "https://twitter.com/elliegoulding",
       "facebookURL": "https://www.facebook.com/elliegoulding",
-      "tags": "singer, entertainer, artist",
+      "tags": [
+          "singer",
+          "entertainer",
+          "artist"
+      ],
       "email": "ellie@goulding.com",
       "username": "elliegoulding",
       "password": "ellie"
@@ -46,7 +62,11 @@
       "password": "leonardo",
       "username": "leonardo",
       "jobTitle": "Actor",
-      "tags": "celebrity, movie, entertainer",
+      "tags": [
+          "celebrity",
+          "movie",
+          "entertainer"
+      ],
       "profilePicURL": "http://images.boomsbeat.com/data/images/full/32034/422817_original-jpg.jpg",
       "twitterURL": "https://twitter.com/LeoDiCaprio",
       "facebookURL": "https://www.facebook.com/LeonardoDiCaprio",
@@ -59,7 +79,9 @@
       "password": "brad",
       "username": "brad",
       "jobTitle": "Actor",
-      "tags": "Entertainer",
+      "tags": [
+          "entertainer"
+      ],
       "profilePicURL": "http://images.intouchweekly.com/uploads/posts/image/35654/brad-pitt-oscar-dog-poop.jpg",
       "twitterURL": "https://twitter.com/personalbrad",
       "facebookURL": "https://www.facebook.com/BradPittAngelinaJolie/",
@@ -72,7 +94,11 @@
       "password": "ryan",
       "username": "ryan",
       "jobTitle": "Actor",
-      "tags": "Entertainer, movie, celebrity",
+      "tags": [
+          "entertainer",
+          "movie",
+          "celebrity"
+      ],
       "profilePicURL": "http://marieclaire.media.ipcdigital.co.uk/11116/00008b20a/dc6c/Ryan-Reynolds-James.jpg",
       "twitterURL": "https://twitter.com/VancityReynolds",
       "facebookURL": "https://www.facebook.com/VancityReynolds/",
@@ -85,7 +111,11 @@
       "password": "justin",
       "username": "justin",
       "jobTitle": "Singer and composer",
-      "tags": "singer, composer, celebrity",
+      "tags": [
+            "singer",
+            "composer",
+            "celebrity"
+      ],
       "profilePicURL": "http://static.comicvine.com/uploads/original/14/149534/4661440-9107169598-HiEKWG.jpeg",
       "twitterURL": "https://twitter.com/justinbieber",
       "facebookURL": "https://www.facebook.com/justinbieber",
@@ -98,7 +128,10 @@
       "password": "adele",
       "username": "adele",
       "jobTitle": "Singer",
-      "tags": "singer, composer",
+      "tags": [
+          "singer",
+          "composer"
+      ],
       "profilePicURL": "https://pbs.twimg.com/profile_images/672996976347111426/aMbJuAki.jpg",
       "twitterURL": "https://twitter.com/adele",
       "facebookURL": "https://www.facebook.com/adele",
@@ -111,7 +144,10 @@
       "password": "tim",
       "username": "tim",
       "jobTitle": "Apple CEO",
-      "tags": "entrepreneur, tech",
+      "tags": [
+          "entrepreneur",
+          "tech"
+      ],
       "profilePicURL": "https://pbs.twimg.com/profile_images/378800000483764274/ebce94fb34c055f3dc238627a576d251.jpeg",
       "twitterURL": "http://twitter.com/tim_cook",
       "facebookURL": "http://facebook.com/tim_cook",
@@ -124,10 +160,30 @@
       "password": "elon",
       "username": "elonmusk",
       "jobTitle": "Tesla, Space X, Solar City & Paypal",
-      "tags": "Entrepreneur, tech, space",
+      "tags": [
+          "entrepreneur",
+          "tech",
+          "space"
+      ],
       "profilePicURL": "http://5372-presscdn-0-77.pagely.netdna-cdn.com/wp-content/uploads/2015/05/elon-musk.jpg",
       "twitterURL": "http://twitter.com/elonmusk",
       "facebookURL": "http://facebook.com/elonmusk"
+    },
+    {
+      "fname": "Bill",
+      "lname": "Gates",
+      "email": "bill@gates.com",
+      "password": "bill",
+      "username": "billgates",
+      "jobTitle": "Philanthropist",
+      "tags": [
+        "tech",
+        "entrepreneur",
+        "computer"
+      ],
+      "profilePicURL": "http://myhero.com/images/guest/g243/hero106692/bill%20gates.jpeg",
+      "twitterURL": "http://twitter.com/BillGates",
+      "facebookURL": "http://facebook.com/BillGates"
     }
   ],
   "contacts": [
