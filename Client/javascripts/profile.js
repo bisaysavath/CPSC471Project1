@@ -57,14 +57,15 @@ var main = function () {
                     $(".user-title").append(user.jobTitle);
 
                     // Set user's tags
-                    user.tags.split(",").forEach(function (tag) {
-
-                        // Remove white space from tag
-                        if (tag.indexOf(" ") === 0) {
-                            tag = tag.substring(1);
-                        }
+                    user.tags.forEach(function (tag) {
 
                         var $tagSpan = $("<span>").append( " #" + tag);
+                        
+                        $tagSpan.on("click", function () {
+                            // If tags are clicked, set cookie to hold on that tag
+                            setCookie("tag", tag);
+                            window.location.href = ("discover.html");
+                        });
 
                         $(".user-tags").append($tagSpan);
                     });

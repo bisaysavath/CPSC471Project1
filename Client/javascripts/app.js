@@ -2,13 +2,7 @@ var main = function () {
     "use strict";
 
     $("h2").hide();
-
-    $("h2").fadeIn();
-
-    // Check cookie if the user is signed in
-    // var cookie = document.cookie;
-    // var username = cookie.substring("username=".length, cookie.length);
-    // var isLogIn = cookie.substring(username.length + "login=".length + 1, cookie.length);
+    $("h2").fadeIn(500);
     
     var username = getCookie("username");
     var isLogIn = getCookie("login");
@@ -24,7 +18,6 @@ var main = function () {
     $("body header nav a:nth-child(3)").on("click", function () {
         if (username !== "") {
             // Delete cookie by setting it to passed date
-            // document.cookie = "username=" + username + ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
             deleteCookie("username", username);
         }
     });
@@ -58,6 +51,5 @@ var getCookie = function (cname) {
 var deleteCookie = function (cname, cvalue) {
     document.cookie = cname + "=" + cvalue + ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
 }
-
 
 $(document).ready(main);

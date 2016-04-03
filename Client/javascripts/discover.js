@@ -67,8 +67,9 @@ var main = function () {
         });
     });
 
-    // Reset tag cookie at the end
+    // Reset cookies at the end
     deleteCookie("tag", getTag);
+    // deleteCookie("username", getCookie("username"));
 };
 
 $(document).ready(function() {
