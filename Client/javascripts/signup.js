@@ -1,26 +1,27 @@
-var main = function (){
+var main = function() {
+    "use strict";
 
     /*toogling between "login" and "signup" */
-    $('.tab a').on('click', function(e) {
+    $(".tab a").on("click", function(e) {
 
         e.preventDefault();
 
-        $(this).parent().addClass('active');
-        $(this).parent().siblings().removeClass('active');
+        $(this).parent().addClass("active");
+        $(this).parent().siblings().removeClass("active");
 
-        target = $(this).attr('href');
+        target = $(this).attr("href");
         console.log(target);
 
-        $('.tab-content > div').not(target).hide();
+        $(".tab-content > div").not(target).hide();
 
         $(target).fadeIn(600);
 
     });
 
-    $("button").on("click", function(){
+    $("button").on("click", function() {
 
         //Create variable to see if user is "logging in" of "signing up"
-        var $loginOrSignUp = $('.tab-group .active').text();
+        var $loginOrSignUp = $(".tab-group .active").text();
 
         if ($loginOrSignUp === "Log In") {
             console.log("I am processing password and username");
@@ -45,11 +46,10 @@ var main = function (){
 
                             // Set cookie to current user
                             setCookie("username", user.username, true);
-                            
+
                             // Go to profile profile-page
                             window.location.href = "profile.html";
-                        }
-                        else {
+                        } else {
                             alert("User entered incorrect password.");
                             console.log("User entered incorrect password.");
                         }
@@ -62,8 +62,7 @@ var main = function (){
                 }
 
             });
-        }
-        else {
+        } else {
             console.log("I am processing a new user TEST TEST");
 
             var fname = $("#fname").val();
@@ -76,17 +75,17 @@ var main = function (){
             var profilePic = $("#profilePic").val();
             var twitterURL = "http://twitter.com/" + $("#twitter").val();
             var facebookURL = "http://facebook.com/" + $("#facebook").val();
-            
+
             // Turn tags to array and remove any whitespaces
             var jobTagsArray = jobTags.split(",");
-            
-            for(index = 0; index < jobTagsArray.length; index++) {
+
+            for (var index = 0; index < jobTagsArray.length; index++) {
                 var tempString = jobTagsArray[index];
-                if(tempString.indexOf(" ") === 0) {
+                if (tempString.indexOf(" ") === 0) {
                     jobTagsArray[index] = tempString.substring(1);
                 }
             }
-            
+
             var newUser = {
                 "fname": fname,
                 "lname": lname,
@@ -111,40 +110,39 @@ var main = function (){
             $("#profilePic").val("");
             $("#twitter").val("");
             $("#facebook").val("");
-            
+
             // Node.js server requires ajax to post
-            $.ajax
-            ({
-                type: 'post',
-                url: '/users',
-                contentType: 'application/json',
+            $.ajax({
+                type: "post",
+                url: "/users",
+                contentType: "application/json",
                 data: JSON.stringify(newUser),
-                success: function(){
+                success: function() {
                     console.log("Contact posted");
                     // Set cookie to current user
                     setCookie("username", newUser.username, true);
-                    
+
                     // Go to profile profile-page
                     window.location.href = "profile.html";
                 }
-            })
-            
+            });
+
             // $.post("/users", newUser, function () {
             //     // Set cookie to current user
             //     setCookie("username", newUser.username, true);
-                
+
             //     // Go to profile profile-page
             //     window.location.href = "profile.html";
             // });
         }
     });
-}
+};
 
-$(document).ready(function(){
+$(document).ready(function() {
     "use strict";
 
-   $("#signup").hide();
-   $(".profile-page").hide();
-   main();
+    $("#signup").hide();
+    $(".profile-page").hide();
+    main();
 
 });

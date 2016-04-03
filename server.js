@@ -1,30 +1,40 @@
-var findUsersById = function (id, callback) {
-    database.users.forEach( function (user) {
-        if (user.id == id) {
-            return callback(user);
-        }
-    });
-};
-
-var readDB = function () {
-    fs.readFile("db.json", "utf8", function (err, data) {
-        if (err) throw err;
-        database = JSON.parse(data);
-    });
-}
-
-var writeDB = function () {
-    fs.writeFile("db.json", JSON.stringify(database, null, 2),"utf8", (err) => {
-        if (err) throw err;
-            console.log("Database saved!");
-    });
-};
-
 var express = require("express"),
     bodyParser = require("body-parser"),
     app = express(),
     fs = require("fs"),
     database;
+
+var findUsersById = function(id, callback) {
+    "use strict";
+
+    database.users.forEach(function(user) {
+        if (String(user.id) === id) {
+            return callback(user);
+        }
+    });
+};
+
+var readDB = function() {
+    "use strict";
+
+    fs.readFile("db.json", "utf8", function(err, data) {
+        if (err) {
+            throw err;
+        }
+        database = JSON.parse(data);
+    });
+};
+
+var writeDB = function() {
+    "use strict";
+
+    fs.writeFile("db.json", JSON.stringify(database, null, 2), "utf8", function(err) {
+        if (err) {
+            throw err;
+        }
+        console.log("Database saved!");
+    });
+};
 
 readDB();
 
@@ -36,13 +46,13 @@ app.use(express.static(__dirname + "/client"));
 app.listen(3000);
 console.log("Server is listening at 3000");
 
-app.get("/contacts", function (req, res) {
+app.get("/contacts", function(req, res) {
     "use strict";
-    
+
     res.json(database.contacts);
 });
 
-app.post("/contacts", function (req, res) {
+app.post("/contacts", function(req, res) {
     "use strict";
 
     var newContact = req.body;
@@ -51,15 +61,15 @@ app.post("/contacts", function (req, res) {
     res.send("Contact posted");
 });
 
-app.get("/users", function (req, res) {
+app.get("/users", function(req, res) {
     "use strict";
-    
-    res.json(database.users); 
+
+    res.json(database.users);
 });
 
-app.post("/users", function (req, res) {
+app.post("/users", function(req, res) {
     "use strict";
-    
+
     var newUser = req.body;
     var getId = database.users.length + 1;
     newUser.id = getId;
@@ -68,26 +78,26 @@ app.post("/users", function (req, res) {
     res.send("New user added");
 });
 
-app.get("/users/:id", function (req, res) {
+app.get("/users/:id", function(req, res) {
     "use strict";
-    
+
     var id = req.params.id;
-    findUsersById(id, function (user) {
+    findUsersById(id, function(user) {
         res.json(user);
     });
 });
 
-app.post("/users/:id", function (req, res) {
+app.post("/users/:id", function(req, res) {
     "use strict";
-    
+
     var id = req.params.id;
-    
-    findUsersById(id, function (user) {
+
+    findUsersById(id, function(user) {
         var indexToUpdate = database.users.indexOf(user);
         database.users[indexToUpdate] = req.body;
     });
-    
+
     writeDB();
-    
+
     res.send("Update profile succeeded");
 });
