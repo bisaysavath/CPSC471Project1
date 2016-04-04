@@ -89,6 +89,7 @@ var main = function() {
                 // Handles empty tags
                 var jobTagsArray = [];
                 if(jobTags !== "") {
+                    console.log("Empty tag");
                     // Turn tags to array and remove any whitespaces
                     jobTagsArray = jobTags.split(",");
 

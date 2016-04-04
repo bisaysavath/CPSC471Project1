@@ -60,12 +60,17 @@ var updateProfile = function(user) {
         console.log("submited");
         var url = "/users/" + user.id;
 
-        var jobTagsArray = $tag.val().split(",");
+        // Handles empty tags
+        var jobTagsArray = [];
+        if($tag.val() !== "") {
+            jobTagsArray = $tag.val().split(",");
 
-        for (var index = 0; index < jobTagsArray.length; index++) {
-            var tempString = jobTagsArray[index];
-            if (tempString.indexOf(" ") === 0) {
-                jobTagsArray[index] = tempString.substring(1);
+            // Turn tags into array and get rid of any spaces
+            for (var index = 0; index < jobTagsArray.length; index++) {
+                var tempString = jobTagsArray[index];
+                if (tempString.indexOf(" ") === 0) {
+                    jobTagsArray[index] = tempString.substring(1);
+                }
             }
         }
 
