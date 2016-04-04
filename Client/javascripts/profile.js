@@ -161,13 +161,16 @@ var main = function() {
                     // Set user's tags
                     user.tags.forEach(function(tag) {
 
-                        var $tagSpan = $("<span>").append(" #" + tag);
+                        // tags array holds an empty string when user didn't input tags
+                        if (tag !== "") {
+                            var $tagSpan = $("<span>").append(" #" + tag);
 
-                        $tagSpan.on("click", function() {
-                            // If tags are clicked, set cookie to hold on that tag
-                            setCookie("tag", tag);
-                            window.location.href = ("discover.html");
-                        });
+                            $tagSpan.on("click", function() {
+                                // If tags are clicked, set cookie to hold on that tag
+                                setCookie("tag", tag);
+                                window.location.href = ("discover.html");
+                            });
+                        }
 
                         $(".user-tags").append($tagSpan);
                     });

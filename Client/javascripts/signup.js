@@ -24,7 +24,7 @@ var main = function() {
         var $loginOrSignUp = $(".tab-group .active").text();
 
         if ($loginOrSignUp === "Log In") {
-            console.log("I am processing password and username");
+            console.log("Processing password and username");
             var loginEmail = $("#loginEmail").val();
             var loginPassword = $("#loginPassword").val();
 
@@ -63,8 +63,8 @@ var main = function() {
 
             });
         } else {
-            console.log("I am processing a new user TEST TEST");
-
+            console.log("Processing a new user");
+            
             var fname = $("#fname").val();
             var lname = $("#lname").val();
             var email = $("#email").val();
@@ -75,65 +75,78 @@ var main = function() {
             var profilePic = $("#profilePic").val();
             var twitterURL = "http://twitter.com/" + $("#twitter").val();
             var facebookURL = "http://facebook.com/" + $("#facebook").val();
-
-            // Turn tags to array and remove any whitespaces
-            var jobTagsArray = jobTags.split(",");
-
-            for (var index = 0; index < jobTagsArray.length; index++) {
-                var tempString = jobTagsArray[index];
-                if (tempString.indexOf(" ") === 0) {
-                    jobTagsArray[index] = tempString.substring(1);
-                }
+            
+            // Check for valid inputs
+            var requiredInputsIsValid = true;
+            
+            if(fname === "" || lname === "" || email === "" ||
+                jobTitle === "" || username === "" || password === "") { 
+                requiredInputsIsValid = false;
             }
 
-            var newUser = {
-                "fname": fname,
-                "lname": lname,
-                "email": email,
-                "password": password,
-                "username": username,
-                "jobTitle": jobTitle,
-                "tags": jobTagsArray,
-                "profilePicURL": profilePic,
-                "twitterURL": twitterURL,
-                "facebookURL": facebookURL
-            };
+            if( requiredInputsIsValid === true ) {
+                
+                // Handles empty tags
+                var jobTagsArray = [];
+                if(jobTags !== "") {
+                    // Turn tags to array and remove any whitespaces
+                    jobTagsArray = jobTags.split(",");
 
-            // Clearing all the input values
-            $("#fname").val("");
-            $("#lname").val("");
-            $("#email").val("");
-            $("#password").val("");
-            $("#username").val("");
-            $("#jobTitle").val("");
-            $("#tags").val("");
-            $("#profilePic").val("");
-            $("#twitter").val("");
-            $("#facebook").val("");
-
-            // Node.js server requires ajax to post
-            $.ajax({
-                type: "post",
-                url: "/users",
-                contentType: "application/json",
-                data: JSON.stringify(newUser),
-                success: function() {
-                    console.log("Contact posted");
-                    // Set cookie to current user
-                    setCookie("username", newUser.username, true);
-
-                    // Go to profile profile-page
-                    window.location.href = "profile.html";
+                    for (var index = 0; index < jobTagsArray.length; index++) {
+                        var tempString = jobTagsArray[index];
+                        
+                        if (tempString.indexOf(" ") === 0) {
+                            jobTagsArray[index] = tempString.substring(1);
+                        }
+                    }
                 }
-            });
+                
+                // Handles empty profile picture
+                if(profilePic === "") {
+                    profilePic = "images/default-profile.png"
+                }
 
-            // $.post("/users", newUser, function () {
-            //     // Set cookie to current user
-            //     setCookie("username", newUser.username, true);
+                var newUser = {
+                    "fname": fname,
+                    "lname": lname,
+                    "email": email,
+                    "password": password,
+                    "username": username,
+                    "jobTitle": jobTitle,
+                    "tags": jobTagsArray,
+                    "profilePicURL": profilePic,
+                    "twitterURL": twitterURL,
+                    "facebookURL": facebookURL
+                };
 
-            //     // Go to profile profile-page
-            //     window.location.href = "profile.html";
-            // });
+                // Clearing all the input values
+                $("#fname").val("");
+                $("#lname").val("");
+                $("#email").val("");
+                $("#password").val("");
+                $("#username").val("");
+                $("#jobTitle").val("");
+                $("#tags").val("");
+                $("#profilePic").val("");
+                $("#twitter").val("");
+                $("#facebook").val("");
+
+                // Node.js server requires ajax to post
+                $.ajax({
+                    type: "post",
+                    url: "/users",
+                    contentType: "application/json",
+                    data: JSON.stringify(newUser),
+                    success: function() {
+                        console.log("Contact posted");
+                        // Set cookie to current user
+                        setCookie("username", newUser.username, true);
+
+                        // Go to profile profile-page
+                        window.location.href = "profile.html";
+                    }
+                });
+            }
         }
     });
 };
