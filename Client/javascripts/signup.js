@@ -163,6 +163,7 @@ var main = function() {
 $(document).ready(function() {
     "use strict";
 
+    $("#signup").hide();
     main();
-
+    
 });
