@@ -1,7 +1,9 @@
 var main = function() {
-    // "use strict";
-
-    /*toogling between "login" and "signup" */
+    
+    /*
+    Credit to http://codepen.io/ehermanson/pen/KwKWEv
+    */
+    /*toogling between "login" and "signup" button*/
     $(".tab a").on("click", function(e) {
 
         e.preventDefault();
@@ -17,21 +19,26 @@ var main = function() {
         $(target).fadeIn(600);
 
     });
-
+    
+    //Processing Log In or Sign Up of user
     $("button").on("click", function() {
 
         //Create variable to see if user is "logging in" of "signing up"
         var $loginOrSignUp = $(".tab-group .active").text();
-
+        
+        //Processing Log In
         if ($loginOrSignUp === "Log In") {
+            
             console.log("Processing password and username");
+            
             var loginEmail = $("#loginEmail").val();
             var loginPassword = $("#loginPassword").val();
-
+            
             $("#loginEmail").val("");
             $("#loginPassword").val("");
 
             $.get("/users", function(users) {
+                
                 console.log(users);
                 var isUserFound = false;
                 users.forEach(function(user) {
@@ -63,6 +70,7 @@ var main = function() {
 
             });
         } else {
+            //Processing Sign Up of new user
             console.log("Processing a new user");
             
             var fname = $("#fname").val();
@@ -89,7 +97,7 @@ var main = function() {
                 // Handles empty tags
                 var jobTagsArray = [];
                 if(jobTags !== "") {
-                    console.log("Empty tag");
+                    
                     // Turn tags to array and remove any whitespaces
                     jobTagsArray = jobTags.split(",");
 
@@ -139,7 +147,7 @@ var main = function() {
                     contentType: "application/json",
                     data: JSON.stringify(newUser),
                     success: function() {
-                        console.log("Contact posted");
+                        console.log("User posted");
                         // Set cookie to current user
                         setCookie("username", newUser.username, true);
 
@@ -156,7 +164,6 @@ $(document).ready(function() {
     "use strict";
 
     $("#signup").hide();
-    $(".profile-page").hide();
     main();
-
+    
 });
