@@ -2,7 +2,8 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     app = express(),
     fs = require("fs"),
-    database;
+    database,
+    port = process.env.port || 3000;
 
 var findUsersById = function(id, callback) {
     "use strict";
@@ -43,8 +44,9 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + "/client"));
 
-app.listen(3000);
-console.log("Server is listening at 3000");
+app.listen(3000, function () {
+    console.log("Server is listening at port " + port);
+});
 
 app.get("/contacts", function(req, res) {
     "use strict";
