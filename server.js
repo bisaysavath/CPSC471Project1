@@ -3,7 +3,7 @@ var express = require("express"),
     app = express(),
     fs = require("fs"),
     database,
-    port = process.env.port || 3000;
+    port = process.env.PORT || 3000;
 
 var findUsersById = function(id, callback) {
     "use strict";
