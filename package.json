@@ -8,18 +8,14 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": "6.9.4"
+    "node": "5.9.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bisaysavath/CPSC473Project1.git"
+    "url": "https://github.com/bisaysavath/CPSC473Project1.git"
   },
   "author": "Billy Saysavath and friends",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bisaysavath/CPSC473Project1/issues"
-  },
-  "homepage": "https://github.com/bisaysavath/CPSC473Project1#readme",
   "dependencies": {
     "body-parser": "^1.16.1",
     "express": "^4.14.1"

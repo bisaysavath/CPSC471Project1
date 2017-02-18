@@ -1,7 +1,7 @@
-var express = require("express"),
-    bodyParser = require("body-parser"),
+var express = require('express'),
+    bodyParser = require('body-parser'),
     app = express(),
-    fs = require("fs"),
+    fs = require('fs'),
     database,
     port = process.env.PORT || 3000;
 
