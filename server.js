@@ -42,7 +42,7 @@ readDB();
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname + "/client"));
+app.use(express.static(__dirname + "/Client"));
 
 app.listen(port, function () {
     console.log("Server is listening at port " + port);
