@@ -44,7 +44,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + "/client"));
 
-app.listen(3000, function () {
+app.listen(port, function () {
     console.log("Server is listening at port " + port);
 });
 
