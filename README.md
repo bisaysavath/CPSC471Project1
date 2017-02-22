@@ -1,7 +1,11 @@
 CPSC 473 - Web Programming and Data Management (Cal State Fullerton)
 =====
 Link to site:
+<<<<<<< HEAD
 https://cpsc473-project1.herokuapp.com/
+=======
+https://cpsc473-project1.herokuapp.com/index.html
+>>>>>>> 5b3d52e19fa96469b72a5c2adb885c087492799e
 
 Summary
 ======
